@@ -1,7 +1,6 @@
 relative_path,size_bytes,origin
-CITATION.cff,1298,generated
-README.md,79372,generated
-RELEASE_VALIDATION.md,23128,generated
+CITATION.cff,1337,generated
+README.md,78636,generated
 artifacts/paper/claims_matrix.csv,3512,copied
 artifacts/paper/experimental_completion/closed_set_confusion_mean.csv,1617,copied
 artifacts/paper/experimental_completion/closed_set_confusion_sources.csv,610,copied
@@ -26,7 +25,7 @@ artifacts/paper/mentor_comment3_4_final/open_five_packet_per_rotation.csv,16554,
 artifacts/paper/mentor_comment3_4_final/open_five_packet_summary.csv,6787,copied
 artifacts/paper/mentor_comment3_4_final/open_original_reproduction.csv,7759,copied
 artifacts/phase1/controller_requirements.lock.txt,462,copied
-artifacts/phase1/environment_manifest.json,1308,copied
+artifacts/phase1/environment_manifest.json,1400,copied
 artifacts/phase1/ryu_commit.txt,41,copied
 artifacts/phase1/ryu_tag.txt,6,copied
 artifacts/phase2/cicids_audit.json,6283,copied
@@ -118,7 +117,7 @@ artifacts/phase4/benchmark/phase4_benchmark_summary.json,4922,copied
 artifacts/phase4/benchmark/phase4_pipeline_summary.csv,1177,copied
 artifacts/phase4/benchmark_protocol.json,877,copied
 artifacts/phase4/phase4_protocol.json,1419,copied
-config/phase1.json,450,copied
+config/phase1.json,542,copied
 controller/l2_learning.py,4045,copied
 controller/phase4_monitor.py,21485,copied
 paired_open_set_auroc.csv,737,copied
@@ -126,11 +125,11 @@ paired_open_set_wilcoxon.py,3173,copied
 reproducibility/implementation_inventory.json,25502,generated
 reproducibility/original_state_after.json,104129,generated
 reproducibility/original_state_before.json,656149,generated
-reproducibility/release_file_inventory.csv,11224,generated
-reproducibility/release_sha256.txt,20310,generated
+reproducibility/release_file_inventory.csv,11185,generated
+reproducibility/release_sha256.txt,20222,generated
 reproducibility/selection_plan.json,13413,generated
-reproducibility/source_copy_integrity.json,55307,generated
-reproducibility/validation_results.json,57473,generated
+reproducibility/source_copy_integrity.json,55547,generated
+reproducibility/validation_results.json,57949,generated
 scripts/paper/audit_comment3_4_final.py,62596,copied
 scripts/paper/audit_review2_experiments.py,8195,copied
 scripts/paper/build_closed_set_confusion_matrix.py,8239,copied

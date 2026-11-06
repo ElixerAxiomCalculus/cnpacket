@@ -1604,5 +1604,15 @@
     "preexisting_git_status_and_diff_unchanged": true,
     "unchanged_scope": "Research files and root Git internals; environment/vendor/private trees counted but contents not read or snapshotted; atime and directory mtime excluded."
   },
-  "overall_static_packaging_status": "PASS with documented reproduction/metadata limitations"
+  "overall_static_packaging_status": "PASS with documented reproduction/metadata limitations",
+  "author_requested_revision": {
+    "manuscript_title": "Why Closed-Set Scores Mislead: A Leakage-Aware Benchmark of Payload-Free Malware Traffic Classification Under Unseen Families and SDN Deployment",
+    "title_fields_consistent": true,
+    "markdown_validation_report_removed": true,
+    "metadata_only_changes": [
+      "config/phase1.json: project",
+      "artifacts/phase1/environment_manifest.json: project"
+    ],
+    "original_research_files_modified": false
+  }
 }

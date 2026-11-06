@@ -1,5 +1,5 @@
 {
-  "project": "Deep-Learning Malware/Traffic Classification via SDN",
+  "project": "Why Closed-Set Scores Mislead: A Leakage-Aware Benchmark of Payload-Free Malware Traffic Classification Under Unseen Families and SDN Deployment",
   "phase": 1,
   "controller": {
     "framework": "Ryu",

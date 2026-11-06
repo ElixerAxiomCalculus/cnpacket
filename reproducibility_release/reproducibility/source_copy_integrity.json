@@ -171,8 +171,11 @@
     "path": "artifacts/phase1/environment_manifest.json",
     "original_sha256": "3ccc16349beb54e7a1c26fb997f8d5f8304fab5a73294bde1ffb4ada193aa718",
     "removed_comment_tokens": 0,
-    "status": "byte-identical copy",
-    "release_sha256": "3ccc16349beb54e7a1c26fb997f8d5f8304fab5a73294bde1ffb4ada193aa718"
+    "status": "Author-requested project-title metadata update; all other JSON fields unchanged",
+    "release_sha256": "70cb71c13fa0bc08d5351950f001f3ea2ac4f3b3c13693c9a1f97214a6886c6a",
+    "authorized_metadata_changes": [
+      "project"
+    ]
   },
   {
     "path": "artifacts/phase1/ryu_commit.txt",
@@ -815,8 +818,11 @@
     "path": "config/phase1.json",
     "original_sha256": "c16e3fc2fdcaf6e16d032257c360c46fbaf2e826a51292714c465c18cb99e9db",
     "removed_comment_tokens": 0,
-    "status": "byte-identical copy",
-    "release_sha256": "c16e3fc2fdcaf6e16d032257c360c46fbaf2e826a51292714c465c18cb99e9db"
+    "status": "Author-requested project-title metadata update; all other JSON fields unchanged",
+    "release_sha256": "7124d0ffa7a38abd75ef9bbfbb6102a4351953e808efb703ee15984b8b0f3ebe",
+    "authorized_metadata_changes": [
+      "project"
+    ]
   },
   {
     "path": "controller/l2_learning.py",

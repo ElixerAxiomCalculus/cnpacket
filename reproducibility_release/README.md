@@ -1,6 +1,6 @@
-# Leakage-Aware Evaluation of Payload-Free Malware Classification Across Unseen Families and SDN Deployment
+# Why Closed-Set Scores Mislead: A Leakage-Aware Benchmark of Payload-Free Malware Traffic Classification Under Unseen Families and SDN Deployment
 
-This code-focused package supports journal-submission reproducibility for the manuscript named above. **Title provenance:** this title was explicitly supplied by the authors in the packaging request; no manuscript file was present in `paper/` or elsewhere in the inspected research documentation to independently verify a newer title. Older environment metadata uses “Deep-Learning Malware/Traffic Classification via SDN”; it is retained unchanged as historical metadata.
+This code-focused package supports journal-submission reproducibility for the manuscript named above. **Title provenance:** the title was updated at the authors’ request. The release README, citation metadata, project configuration and environment metadata use this author-provided title. The title fields in the two copied JSON metadata files were updated; experiment parameters and the original research files remain unchanged.
 
 The study evaluates how classification changes when capture context, duplicate representations, unseen malware families, and observation length are controlled. Signed packet sizes and inter-arrival times support traffic analysis without inspecting payload bytes. Closed-set classification chooses among families seen in training; open-set evaluation also rejects unseen families. Five-packet evaluation measures the effect of short observation on frozen models, while few-shot adaptation adds a prototype from a small labeled support set. The SDN component measures integration and processing overhead. This is a reproducibility-focused evaluation with substantial generalization limitations.
 
@@ -31,13 +31,12 @@ A separate APT dataset tree exists in the original workspace, but no frozen APT 
 
 ## Release directory structure
 
-The tree lists every included directory; individual files are enumerated in the tables below and in `RELEASE_VALIDATION.md`. There are no empty placeholder directories.
+The tree lists every included directory; individual files are enumerated in the tables below and in `reproducibility/release_file_inventory.csv`. There are no empty placeholder directories.
 
 ```text
 reproducibility_release/
 ├── README.md
 ├── CITATION.cff
-├── RELEASE_VALIDATION.md
 ├── paired_open_set_wilcoxon.py
 ├── paired_open_set_auroc.csv
 ├── config/                          # phase1.json: historical SDN configuration
@@ -438,43 +437,43 @@ Every included implementation, protocol, configuration and original evidence fil
 | `artifacts/phase1/environment_manifest.json` | Original OS, hardware, Python/controller/testbed versions and topology | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase1/ryu_commit.txt` | Exact upstream Ryu source commit | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase1/ryu_tag.txt` | Exact upstream Ryu source tag | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/cicids_audit.json` | Original raw CSV schema and class/count audit used by low-memory finalizer | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/cicids_audit.json` | Original raw CSV schema and class/count audit used by low-memory finalizer | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/cicids_benchmark_split_summary.csv` | Frozen aggregate/counts/paired evidence: cicids_benchmark_split_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/cicids_binary_distribution.csv` | Frozen aggregate/counts/paired evidence: cicids_binary_distribution.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/cicids_clean_class_distribution.csv` | Frozen aggregate/counts/paired evidence: cicids_clean_class_distribution.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/cicids_cleaning_report.json` | Frozen cleaning totals, dual hashes and deterministic split definitions | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
-| `artifacts/phase2/cicids_column_mapping.json` | Original and canonical feature-column order used by tree scripts | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/cicids_cleaning_report.json` | Frozen cleaning totals, dual hashes and deterministic split definitions | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
+| `artifacts/phase2/cicids_column_mapping.json` | Original and canonical feature-column order used by tree scripts | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/cicids_day_distribution.csv` | Frozen aggregate/counts/paired evidence: cicids_day_distribution.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/cicids_day_holdout_protocol.json` | Exact train/validation/test day sets and benign-only Monday scope | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
-| `artifacts/phase2/cicids_label_mapping.json` | Canonical ASCII class-name mappings including damaged Web Attack labels | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/cicids_day_holdout_protocol.json` | Exact train/validation/test day sets and benign-only Monday scope | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
+| `artifacts/phase2/cicids_label_mapping.json` | Canonical ASCII class-name mappings including damaged Web Attack labels | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/iscx_extraction_environment.txt` | Original 7z package/executable and extractor hash provenance | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/iscx_flow_fold_summary.csv` | Frozen aggregate/counts/paired evidence: iscx_flow_fold_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/iscx_flow_protocol.json` | ISCX extraction units, eligible activities and inherited capture folds | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/iscx_flow_protocol.json` | ISCX extraction units, eligible activities and inherited capture folds | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/iscx_model_cv_summary.csv` | Frozen aggregate/counts/paired evidence: iscx_model_cv_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/iscx_model_protocol.json` | Model input, five rotations, eligibility and training-only capture cap | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/iscx_model_protocol.json` | Model input, five rotations, eligibility and training-only capture cap | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/iscxvpn_capture_manifest.csv` | Provider ZIP member names, activity/domain, byte sizes and CRC identities | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/iscxvpn_cv_protocol.json` | Five capture-group folds, strata and excluded activities | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/iscxvpn_cv_protocol.json` | Five capture-group folds, strata and excluded activities | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/iscxvpn_protocol_manifest.csv` | Capture-member activity/domain labels, inclusion decisions and deterministic folds | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/ustc_capture_manifest.csv` | Provider/class capture names, source-relative paths, sizes and SHA-256 identities | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/ustc_fewshot_support.csv` | Frozen nested support flow IDs by target family and K; no packets or endpoint addresses | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase2/ustc_final_sha256.txt` | Unchanged historical SHA-256 manifest; also names excluded artifacts; not a complete release checksum list | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/ustc_flow_protocol.json` | USTC extraction units, segmentation and sequence definitions | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/ustc_flow_protocol.json` | USTC extraction units, segmentation and sequence definitions | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase2/ustc_malware_protocol_summary.csv` | Frozen aggregate/counts/paired evidence: ustc_malware_protocol_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase2/ustc_protocol.json` | Representation grouping, temporal splits, ten target/calibration rotations, nested supports | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase2/ustc_protocol.json` | Representation grouping, temporal splits, ten target/calibration rotations, nested supports | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase3/cicids/day_holdout/day_holdout_binary_summary.csv` | Frozen aggregate/counts/paired evidence: day_holdout_binary_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/cicids/day_holdout/day_holdout_day_summary.csv` | Frozen aggregate/counts/paired evidence: day_holdout_day_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/cicids/day_holdout/day_holdout_runs.csv` | Frozen aggregate/counts/paired evidence: day_holdout_runs.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/cicids/final/tree_final_runs.csv` | Frozen aggregate/counts/paired evidence: tree_final_runs.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/cicids/final/tree_final_summary.csv` | Frozen aggregate/counts/paired evidence: tree_final_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase3/cicids/tree_final_protocol.json` | Frozen RF/XGBoost hyperparameters, thresholds, five seeds and metrics | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase3/cicids/tree_final_protocol.json` | Frozen RF/XGBoost hyperparameters, thresholds, five seeds and metrics | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase3/iscx/early_sequence/early_sequence_class_summary.csv` | Frozen aggregate/counts/paired evidence: early_sequence_class_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/early_sequence/early_sequence_domain_summary.csv` | Frozen aggregate/counts/paired evidence: early_sequence_domain_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/early_sequence/early_sequence_paired_deltas.csv` | Frozen aggregate/counts/paired evidence: early_sequence_paired_deltas.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/early_sequence/early_sequence_runs.csv` | Frozen aggregate/counts/paired evidence: early_sequence_runs.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/early_sequence/early_sequence_summary.csv` | Frozen aggregate/counts/paired evidence: early_sequence_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/early_sequence/ge50_common_cohort_flow_ids.txt` | Exact flow identity list for the ISCX common ≥50-packet cohort | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase3/iscx/early_sequence_protocol.json` | Common cohort, N=5/10/20/50, split counts and paired-fold protocol | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
-| `artifacts/phase3/iscx/sequence_model_protocol.json` | Four neural architectures, primary N=5 inputs and training settings | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase3/iscx/early_sequence_protocol.json` | Common cohort, N=5/10/20/50, split counts and paired-fold protocol | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
+| `artifacts/phase3/iscx/sequence_model_protocol.json` | Four neural architectures, primary N=5 inputs and training settings | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase3/iscx/sequence_models/sequence_model_class_summary.csv` | Frozen aggregate/counts/paired evidence: sequence_model_class_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/sequence_models/sequence_model_domain_summary.csv` | Frozen aggregate/counts/paired evidence: sequence_model_domain_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/iscx/sequence_models/sequence_model_runs.csv` | Frozen aggregate/counts/paired evidence: sequence_model_runs.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
@@ -490,7 +489,7 @@ Every included implementation, protocol, configuration and original evidence fil
 | `artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_report.json` | Frozen closed-set seed report (metrics, confusion matrix, timing, model reference) | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_report.json` | Frozen closed-set seed report (metrics, confusion matrix, timing, model reference) | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/closed_set/model_ready_sha256.txt` | Unchanged historical SHA-256 manifest; also names excluded artifacts; not a complete release checksum list | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase3/ustc/closed_set_protocol.json` | Ten families, frozen 60/20/20 counts, CNN–BiLSTM and five-seed training | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase3/ustc/closed_set_protocol.json` | Ten families, frozen 60/20/20 counts, CNN–BiLSTM and five-seed training | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase3/ustc/open_set/ce_msp_run_0_report.json` | Frozen open-set method/target report, threshold, normalization and SupCon few-shot metrics where applicable | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/open_set/ce_msp_run_1_report.json` | Frozen open-set method/target report, threshold, normalization and SupCon few-shot metrics where applicable | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/open_set/ce_msp_run_2_report.json` | Frozen open-set method/target report, threshold, normalization and SupCon few-shot metrics where applicable | Original experiment/provenance record | None (evidence) |
@@ -518,16 +517,16 @@ Every included implementation, protocol, configuration and original evidence fil
 | `artifacts/phase3/ustc/open_set/zero_shot_paired_summary.csv` | Frozen aggregate/counts/paired evidence: zero_shot_paired_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/open_set/zero_shot_runs.csv` | Frozen aggregate/counts/paired evidence: zero_shot_runs.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase3/ustc/open_set/zero_shot_summary.csv` | Frozen aggregate/counts/paired evidence: zero_shot_summary.csv; field names and precision retained exactly | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase3/ustc/open_set_protocol.json` | CE/SupCon training, independent calibration, unknown scoring and K=1/5/10 adaptation | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase3/ustc/open_set_protocol.json` | CE/SupCon training, independent calibration, unknown scoring and K=1/5/10 adaptation | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `artifacts/phase4/benchmark/features_benchmark.json` | Synthetic features network trial and microflow timing summary | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase4/benchmark/forwarding_benchmark.json` | Synthetic forwarding network trial and microflow timing summary | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase4/benchmark/gpu_memory_summary.json` | Original incremental whole-device GPU memory evidence; baseline capture not reconstructed here | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase4/benchmark/inference_benchmark.json` | Synthetic inference network trial and microflow timing summary | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase4/benchmark/phase4_benchmark_summary.json` | Synthetic SDN network/pipeline latency, throughput/loss and overhead aggregate | Original experiment/provenance record | None (evidence) |
 | `artifacts/phase4/benchmark/phase4_pipeline_summary.csv` | Synthetic controller and service timing distributions in microseconds | Original experiment/provenance record | None (evidence) |
-| `artifacts/phase4/benchmark_protocol.json` | Five network trials, 500 microflows, latency metrics and synthetic-accuracy policy | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
-| `artifacts/phase4/phase4_protocol.json` | SDN topology, feature units, five-packet horizon and exact deployed model/report mapping | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
-| `config/phase1.json` | Historical four-host/two-switch controller and OpenFlow configuration | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence; never altered during packaging) |
+| `artifacts/phase4/benchmark_protocol.json` | Five network trials, 500 microflows, latency metrics and synthetic-accuracy policy | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
+| `artifacts/phase4/phase4_protocol.json` | SDN topology, feature units, five-packet horizon and exact deployed model/report mapping | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
+| `config/phase1.json` | Historical four-host/two-switch controller and OpenFlow configuration | Read by corresponding implementation or retained as frozen metadata | None (configuration/evidence) |
 | `paired_open_set_auroc.csv` | Original ten-family CE/SupCon paired AUROC table | Original experiment/provenance record | None (evidence) |
 
 ### Packaging records
@@ -536,14 +535,13 @@ Every included implementation, protocol, configuration and original evidence fil
 |---|---|---|---|
 | `README.md` | Workflow, file reference, scientific limitations, access and attribution | Inspected source/protocols and author-supplied metadata | Documentation |
 | `CITATION.cff` | Citation metadata without an invented DOI, email, release date or license | Author-provided manuscript title/names/affiliations | Citation metadata |
-| `RELEASE_VALIDATION.md` | Final file list, counts, exceptions and non-destructive checks | Static validation and integrity records | Packaging report |
 | `reproducibility/selection_plan.json` | Explicit 164-file copy allowlist and excluded category/extension counts | Inspected original filesystem | Selection provenance |
 | `reproducibility/original_state_before.json` | Pre-copy Git state, selected SHA-256 and research/Git file metadata | Read-only original research tree; Git with optional locks disabled | Before snapshot |
-| `reproducibility/source_copy_integrity.json` | Original/copy hashes, comment-removal counts and preserved-comment exceptions | Copied source/evidence | Copy provenance |
+| `reproducibility/source_copy_integrity.json` | Original/copy hashes, comment-removal counts, preserved-comment exceptions and authorized title-field changes | Copied source/evidence | Copy provenance |
 | `reproducibility/implementation_inventory.json` | Per-script descriptions, inputs/outputs, AST imports and exact argument declarations | Static source parsing only | Machine-readable interface inventory |
 | `reproducibility/validation_results.json` | Syntax, file, interface, privacy-pattern and documentation checks | Release files; no research script imports/execution | Static validation record |
 | `reproducibility/original_state_after.json` | Final Git/source recheck and research/Git metadata differences | Before snapshot and read-only originals | After comparison; reports actual scope |
-| `reproducibility/release_file_inventory.csv` | Every final file and byte size, including this inventory and validation report | Completed release | Inventory; sizes stabilized after generation |
+| `reproducibility/release_file_inventory.csv` | Every final file and byte size, including this inventory | Completed release | Inventory; sizes stabilized after generation |
 | `reproducibility/release_sha256.txt` | SHA-256 of every release file except this checksum file itself | Final release bytes | Release integrity manifest; historical manifests remain separate |
 
 Seven Python files are preserved byte-for-byte because included historical manifests hash them; shell comments are retained because Bash heredocs/expansion/directives require stronger proof than syntax checking. Other Python comment removal replaces only nonessential COMMENT tokens with spaces, preserving line positions, all statements/docstrings, shebangs, encodings and directives. ASTs including type comments and non-comment executable token streams are compared before/after. Exact per-file exceptions and hashes appear in `source_copy_integrity.json`.

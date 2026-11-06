@@ -1,6 +1,6 @@
 {
   "generated_at_utc": "2026-10-11T05:26:27.930758+00:00",
-  "project": "Deep-Learning Malware/Traffic Classification via SDN",
+  "project": "Why Closed-Set Scores Mislead: A Leakage-Aware Benchmark of Payload-Free Malware Traffic Classification Under Unseen Families and SDN Deployment",
   "phase": 1,
   "operating_system": {
     "name": "Ubuntu 26.04 LTS",

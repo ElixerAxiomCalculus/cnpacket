@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite this code reproducibility package and its associated manuscript using the author-provided title and authors below. Publication and archive identifiers are pending."
 type: software
-title: "Leakage-Aware Evaluation of Payload-Free Malware Classification Across Unseen Families and SDN Deployment"
+title: "Why Closed-Set Scores Mislead: A Leakage-Aware Benchmark of Payload-Free Malware Traffic Classification Under Unseen Families and SDN Deployment"
 authors:
   - family-names: James
     given-names: Arush
