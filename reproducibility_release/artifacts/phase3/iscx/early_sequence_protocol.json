@@ -1,0 +1,96 @@
+{
+  "dataset": "ISCXVPN2016",
+  "protocol_version": 1,
+  "experiment": "paired_early_classification_common_ge50_cohort",
+  "seed": 20261011,
+  "target": "activity",
+  "architecture": "cnn_bilstm",
+  "sequence_lengths": [5, 10, 20, 50],
+  "common_cohort": {
+    "requirement": "packet_count >= 50",
+    "flows": 1811,
+    "captures": 132,
+    "fold_counts": {
+      "0": 503,
+      "1": 287,
+      "2": 292,
+      "3": 380,
+      "4": 349
+    },
+    "identity_file": "artifacts/phase3/iscx/early_sequence/ge50_common_cohort_flow_ids.txt"
+  },
+  "run_counts": {
+    "0": {
+      "train_raw": 1021,
+      "train_capped": 1021,
+      "validation": 287,
+      "test": 503
+    },
+    "1": {
+      "train_raw": 1232,
+      "train_capped": 1232,
+      "validation": 292,
+      "test": 287
+    },
+    "2": {
+      "train_raw": 1139,
+      "train_capped": 1139,
+      "validation": 380,
+      "test": 292
+    },
+    "3": {
+      "train_raw": 1082,
+      "train_capped": 1082,
+      "validation": 349,
+      "test": 380
+    },
+    "4": {
+      "train_raw": 959,
+      "train_capped": 959,
+      "validation": 503,
+      "test": 349
+    }
+  },
+  "input": {
+    "channels": [
+      "signed_packet_size",
+      "interarrival_time"
+    ],
+    "padding_required": false,
+    "payload_bytes_used": false,
+    "endpoint_addresses_used": false,
+    "endpoint_ports_used": false,
+    "protocol_identifier_used": false
+  },
+  "normalization": {
+    "signed_packet_size": "training-partition RMS scaling without centering",
+    "interarrival_time": "log1p followed by training-partition z-score"
+  },
+  "model": {
+    "conv_channels": 64,
+    "kernel_size": 3,
+    "bilstm_hidden_size_per_direction": 64,
+    "dropout": 0.3
+  },
+  "training": {
+    "batch_size": 256,
+    "dataloader_workers": 0,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 100,
+    "early_stopping_metric": "validation_macro_f1",
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0001,
+    "class_weighting": "inverse_frequency_balanced",
+    "amp": false,
+    "device": "cuda:0"
+  },
+  "evaluation": {
+    "primary_metric": "macro_f1",
+    "primary_scope": "pooled-domain four-class activity classification",
+    "paired_unit": "capture fold",
+    "domain_specific_results": "secondary",
+    "report_mean_std_across": "five capture folds"
+  }
+}

@@ -1,0 +1,20 @@
+item,pass,detail
+closed_set_five_runs,True,reports=5
+accuracy_macro_weighted_f1,True,present in all five USTC closed-set reports
+per_class_precision_recall_f1,True,per_class metrics present
+roc_auc,True,AUC metric present
+training_time,True,training_seconds present
+classifier_inference_latency,True,microseconds/sample present
+model_size,True,model_size_bytes present
+training_gpu_memory,True,peak_gpu_memory_mib present
+parameter_count,True,parameter_count present
+flops_macs_complexity,True,"encoder=67008, closed=68298, FLOPs recorded"
+confusion_matrix,True,"shape=(10, 10)"
+open_set_zero_shot,True,artifacts/phase3/ustc/open_set/zero_shot_summary.csv
+few_shot_k1_k5_k10,True,artifacts/phase3/ustc/open_set/few_shot_summary.csv
+paired_open_set_rotations,True,artifacts/phase3/ustc/open_set/zero_shot_paired_by_target.csv
+sdn_end_to_end_latency_throughput,True,forwarding/features/inference network and pipeline metrics present
+deployment_gpu_memory,True,incremental_gpu_mib=233.0
+closed_set_frozen_manifest,True,artifacts/phase3/ustc/closed_set/closed_set_sha256.txt
+open_set_frozen_manifest,True,artifacts/phase3/ustc/open_set/open_set_sha256.txt
+phase4_frozen_manifest,True,artifacts/phase4/phase4_sha256.txt

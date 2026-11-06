@@ -1,0 +1,15 @@
+{
+  "dataset": "USTC-TFC2016",
+  "extractor_version": 2,
+  "eligible_network_traffic": "IPv4/IPv6 TCP and UDP",
+  "bidirectional_flow_key": "protocol plus canonicalized source/destination IP-port endpoints",
+  "direction_encoding": "+1 in the direction of the first observed packet of the flow segment, -1 in the reverse direction",
+  "segment_identifier": "frame number of the first packet in the idle-timeout-delimited flow segment",
+  "packet_size": "observed Ethernet frame length from frame.len",
+  "interarrival_time_unit": "seconds",
+  "flow_idle_timeout_seconds": 120.0,
+  "stored_sequence_packets": 50,
+  "candidate_minimum_packets": 3,
+  "payload_bytes_used": false,
+  "split_policy": "not assigned during extraction"
+}

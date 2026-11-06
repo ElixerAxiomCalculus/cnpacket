@@ -1,0 +1,27 @@
+{
+  "dataset": "ISCXVPN2016",
+  "extractor_version": 2,
+  "selected_capture_count": 133,
+  "selected_activities": [
+    "chat",
+    "file_transfer",
+    "streaming",
+    "voip"
+  ],
+  "domain": [
+    "nonvpn",
+    "vpn"
+  ],
+  "eligible_network_traffic": "IPv4/IPv6 TCP and UDP",
+  "bidirectional_flow_key": "protocol plus canonicalized IP-port endpoint pair",
+  "direction_encoding": "+1 in the direction of the first observed packet of the flow, -1 in the reverse direction",
+  "segment_identifier": "frame number of the first packet in the idle-timeout-delimited segment",
+  "packet_size": "observed Ethernet frame length from frame.len",
+  "interarrival_time_unit": "seconds",
+  "flow_idle_timeout_seconds": 120.0,
+  "stored_sequence_packets": 50,
+  "payload_bytes_used": false,
+  "fold_assignment": "inherited unchanged from iscxvpn_protocol_manifest.csv",
+  "raw_storage_policy": "one selected ZIP member is temporarily materialized using the 7-Zip CLI, processed, then deleted",
+  "archive_extraction_reason": "Python 3.12 zipfile cannot decompress the compression method used by the original ISCXVPN2016 archives"
+}

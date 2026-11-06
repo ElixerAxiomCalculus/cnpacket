@@ -1,0 +1,8 @@
+===== 7ZIP PACKAGE =====
+7zip=26.00+dfsg-1
+
+===== 7ZIP EXECUTABLE =====
+/usr/bin/7z
+
+===== EXTRACTOR SHA256 =====
+221c641c65c9d5a8e7b242b45cc4ce611e1fd3eb6fb16cf38f4ea187097ae675  scripts/phase2/extract_iscxvpn_flows.py

@@ -1,0 +1,41 @@
+{
+  "phase": 4,
+  "experiment": "sdn_deployment_overhead",
+  "topology": {
+    "hosts": 4,
+    "switches": 2,
+    "host_switch_bandwidth_mbps": 100,
+    "host_switch_delay_ms": 1,
+    "inter_switch_bandwidth_mbps": 100,
+    "inter_switch_delay_ms": 1,
+    "openflow": "1.3",
+    "controller_host": "127.0.0.1",
+    "controller_port": 6653
+  },
+  "modes": {
+    "forwarding": "L2 forwarding only",
+    "features": "L2 forwarding plus first-packet sequence collection",
+    "inference": "L2 forwarding plus sequence collection plus local ML service"
+  },
+  "telemetry": {
+    "switch_dpid": 1,
+    "protocols": [
+      "TCP",
+      "UDP"
+    ],
+    "sequence_packets": 5,
+    "maximum_flow_idle_seconds": 120,
+    "packet_size": "length of full OpenFlow PacketIn frame bytes",
+    "direction": "positive for first-observed flow direction and negative for reverse direction",
+    "interarrival_time": "controller-observed monotonic interarrival seconds"
+  },
+  "inference": {
+    "service": "HTTP localhost",
+    "host": "127.0.0.1",
+    "port": 8765,
+    "model": "models/phase3/ustc/open_set/supcon_proto_run_0.pt",
+    "report": "artifacts/phase3/ustc/open_set/supcon_proto_run_0_report.json",
+    "purpose": "representative proposed-model systems overhead"
+  },
+  "accuracy_policy": "Synthetic Mininet traffic is used only for systems-overhead measurements and is not used to claim malware-classification accuracy."
+}

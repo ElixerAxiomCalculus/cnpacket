@@ -1,0 +1,1608 @@
+{
+  "scientific_reproduction_executed": false,
+  "research_scripts_executed": false,
+  "dependency_installations_executed": false,
+  "python": [
+    {
+      "path": "controller/l2_learning.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "controller/phase4_monitor.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "paired_open_set_wilcoxon.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/paper/audit_comment3_4_final.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/paper/audit_review2_experiments.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/paper/build_closed_set_confusion_matrix.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/paper/build_results_package.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/paper/compute_model_complexity.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/audit_cicids2017.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/audit_iscxvpn_archives.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/audit_raw_datasets.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/extract_iscxvpn_flows.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/extract_ustc_flows.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/extract_ustc_tfc2016.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/finalize_cicids2017_lowmem.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/freeze_iscxvpn_model_protocol.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/freeze_iscxvpn_protocol.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/freeze_ustc_protocol.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase2/prepare_cicids2017.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/build_ustc_closed_model_ready.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_cicids_day_holdout.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_cicids_tree_final.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_iscx_early_sequence.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_iscx_sequence_model.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_ustc_closed_set.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/run_ustc_open_set.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_cicids_day_holdout.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_cicids_tree_final.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_iscx_early_sequence.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_iscx_sequence_models.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_ustc_closed_set.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase3/summarize_ustc_open_set.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase4/run_inference_service.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase4/run_phase4_benchmark.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase4/summarize_phase4_benchmark.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase4/tcp_microflow_client.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "scripts/phase4/tcp_microflow_server.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    },
+    {
+      "path": "topology/research_topology.py",
+      "syntax": "PASS",
+      "ast_type_comments_and_compiled_bytecode_equivalence": "PASS"
+    }
+  ],
+  "shell": [
+    {
+      "path": "scripts/phase3/run_all_cicids_day_holdout.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase3/run_all_iscx_early_sequence.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase3/run_all_iscx_sequence_models.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase3/run_all_ustc_closed_set.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase3/run_all_ustc_open_set.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase4/run_controller_benchmark_mode.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/phase4/sample_gpu_memory.sh",
+      "bash_n": "PASS",
+      "executed": false
+    },
+    {
+      "path": "scripts/run_controller_phase4.sh",
+      "bash_n": "PASS",
+      "executed": false
+    }
+  ],
+  "json": [
+    {
+      "path": "artifacts/paper/experimental_completion/model_complexity.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase1/environment_manifest.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_audit.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_cleaning_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_column_mapping.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_day_holdout_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_label_mapping.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscx_flow_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscx_model_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscxvpn_cv_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/ustc_flow_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/ustc_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/tree_final_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/sequence_model_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261011_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261012_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261013_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_0_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_1_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_2_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_3_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_4_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_5_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_6_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_7_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_8_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_9_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_0_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_1_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_2_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_3_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_4_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_5_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_6_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_7_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_8_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_9_report.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/features_benchmark.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/forwarding_benchmark.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/gpu_memory_summary.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/inference_benchmark.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/phase4_benchmark_summary.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/phase4_protocol.json",
+      "json_loads": "PASS"
+    },
+    {
+      "path": "config/phase1.json",
+      "json_loads": "PASS"
+    }
+  ],
+  "csv": [
+    {
+      "path": "artifacts/paper/claims_matrix.csv",
+      "rows_excluding_header": 9,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/experimental_completion/closed_set_confusion_mean.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/experimental_completion/closed_set_confusion_sources.csv",
+      "rows_excluding_header": 5,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/experimental_completion/closed_set_confusion_std.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/experimental_completion/model_complexity.csv",
+      "rows_excluding_header": 7,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/experimental_completion/review2_experiment_acceptance.csv",
+      "rows_excluding_header": 19,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/master_results.csv",
+      "rows_excluding_header": 19,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/closed_five_packet_per_family.csv",
+      "rows_excluding_header": 150,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/closed_five_packet_per_seed.csv",
+      "rows_excluding_header": 15,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/closed_five_packet_summary.csv",
+      "rows_excluding_header": 15,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/closed_original_reproduction.csv",
+      "rows_excluding_header": 5,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/deployment_run0_five_packet.csv",
+      "rows_excluding_header": 2,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/feature_compatibility_audit.csv",
+      "rows_excluding_header": 12,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/fewshot_summary_verified.csv",
+      "rows_excluding_header": 12,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/fewshot_support_nesting.csv",
+      "rows_excluding_header": 30,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/fewshot_target_family_f1.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/five_packet_threshold_comparison.csv",
+      "rows_excluding_header": 40,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/open_five_packet_per_family.csv",
+      "rows_excluding_header": 180,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/open_five_packet_per_rotation.csv",
+      "rows_excluding_header": 60,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/open_five_packet_summary.csv",
+      "rows_excluding_header": 36,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/paper/mentor_comment3_4_final/open_original_reproduction.csv",
+      "rows_excluding_header": 20,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_benchmark_split_summary.csv",
+      "rows_excluding_header": 6,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_binary_distribution.csv",
+      "rows_excluding_header": 2,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_clean_class_distribution.csv",
+      "rows_excluding_header": 15,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/cicids_day_distribution.csv",
+      "rows_excluding_header": 9,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscx_flow_fold_summary.csv",
+      "rows_excluding_header": 40,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscx_model_cv_summary.csv",
+      "rows_excluding_header": 60,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscxvpn_capture_manifest.csv",
+      "rows_excluding_header": 140,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/iscxvpn_protocol_manifest.csv",
+      "rows_excluding_header": 140,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/ustc_capture_manifest.csv",
+      "rows_excluding_header": 24,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/ustc_fewshot_support.csv",
+      "rows_excluding_header": 160,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase2/ustc_malware_protocol_summary.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/day_holdout/day_holdout_binary_summary.csv",
+      "rows_excluding_header": 2,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/day_holdout/day_holdout_day_summary.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/day_holdout/day_holdout_runs.csv",
+      "rows_excluding_header": 50,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/final/tree_final_runs.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/cicids/final/tree_final_summary.csv",
+      "rows_excluding_header": 2,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence/early_sequence_class_summary.csv",
+      "rows_excluding_header": 16,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence/early_sequence_domain_summary.csv",
+      "rows_excluding_header": 8,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence/early_sequence_paired_deltas.csv",
+      "rows_excluding_header": 3,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence/early_sequence_runs.csv",
+      "rows_excluding_header": 20,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/early_sequence/early_sequence_summary.csv",
+      "rows_excluding_header": 4,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/sequence_models/sequence_model_class_summary.csv",
+      "rows_excluding_header": 16,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/sequence_models/sequence_model_domain_summary.csv",
+      "rows_excluding_header": 8,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/sequence_models/sequence_model_runs.csv",
+      "rows_excluding_header": 20,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/iscx/sequence_models/sequence_model_summary.csv",
+      "rows_excluding_header": 4,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_class_summary.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_runs.csv",
+      "rows_excluding_header": 5,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_summary.csv",
+      "rows_excluding_header": 1,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/few_shot_runs.csv",
+      "rows_excluding_header": 30,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/few_shot_summary.csv",
+      "rows_excluding_header": 3,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_paired_by_target.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_paired_summary.csv",
+      "rows_excluding_header": 9,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_runs.csv",
+      "rows_excluding_header": 20,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_summary.csv",
+      "rows_excluding_header": 2,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "artifacts/phase4/benchmark/phase4_pipeline_summary.csv",
+      "rows_excluding_header": 9,
+      "consistent_columns": "PASS"
+    },
+    {
+      "path": "paired_open_set_auroc.csv",
+      "rows_excluding_header": 10,
+      "consistent_columns": "PASS"
+    }
+  ],
+  "historical_manifest_checks": [
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__BitTorrent__BitTorrent.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__FTP__FTP.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Facetime__Facetime.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Gmail__Gmail.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__MySQL__MySQL.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Outlook__Outlook.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__SMB__SMB-1.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__SMB__SMB-2.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Skype__Skype.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Weibo__Weibo-1.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Weibo__Weibo-2.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Weibo__Weibo-3.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__Weibo__Weibo-4.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Benign__WorldOfWarcraft__WorldOfWarcraft.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Cridex__Cridex.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Geodo__Geodo.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Htbot__Htbot.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Miuref__Miuref.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Neris__Neris.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Nsis-ay__Nsis-ay.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Shifu__Shifu.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Tinba__Tinba.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Virut__Virut.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "data/processed/ustc-tfc2016/flows/Malware__Zeus__Zeus.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "artifacts/phase2/ustc_malware_protocol_manifest.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "artifacts/phase2/ustc_malware_protocol_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "artifacts/phase2/ustc_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "artifacts/phase2/ustc_fewshot_support.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "scripts/phase2/extract_ustc_flows.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase2/ustc_final_sha256.txt",
+      "path": "scripts/phase2/freeze_ustc_protocol.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_class_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/closed_set_summary.log",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261011_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261011_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261011_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261011_test_predictions.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261012_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261012_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261012_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261012_test_predictions.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261013_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261013_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261013_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261013_test_predictions.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261014_test_predictions.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/cnn_bilstm_seed_20261015_test_predictions.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/model_ready.log",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/ustc_closed_model_ready.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "models/phase3/ustc/closed_set/cnn_bilstm_seed_20261011.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "models/phase3/ustc/closed_set/cnn_bilstm_seed_20261012.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "models/phase3/ustc/closed_set/cnn_bilstm_seed_20261013.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "models/phase3/ustc/closed_set/cnn_bilstm_seed_20261014.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "models/phase3/ustc/closed_set/cnn_bilstm_seed_20261015.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "scripts/phase3/build_ustc_closed_model_ready.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "scripts/phase3/run_all_ustc_closed_set.sh",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "scripts/phase3/run_ustc_closed_set.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/closed_set_sha256.txt",
+      "path": "scripts/phase3/summarize_ustc_closed_set.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/model_ready_sha256.txt",
+      "path": "artifacts/phase3/ustc/closed_set/ustc_closed_model_ready.parquet",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/closed_set/model_ready_sha256.txt",
+      "path": "scripts/phase3/build_ustc_closed_model_ready.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase2/ustc_fewshot_support.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase2/ustc_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/batch.log",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_0_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_0_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_0_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_1_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_1_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_1_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_2_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_2_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_2_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_3_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_3_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_3_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_4_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_4_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_4_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_5_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_5_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_5_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_6_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_6_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_6_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_7_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_7_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_7_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_8_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_8_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_8_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_9_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_9_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/ce_msp_run_9_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/few_shot_runs.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/few_shot_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/open_set_summary.log",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/prebatch_sha256.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_0_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_0_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_0_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_1_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_1_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_1_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_2_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_2_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_2_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_3_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_3_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_3_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_4_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_4_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_4_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_5_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_5_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_5_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_6_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_6_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_6_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_7_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_7_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_7_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_8_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_8_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_8_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_9_history.csv",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_9_report.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/supcon_proto_run_9_resources.txt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_paired_by_target.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_paired_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_runs.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set/zero_shot_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set_protocol.json",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "artifacts/phase3/ustc/open_set_protocol.sha256",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_0.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_1.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_2.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_3.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_4.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_5.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_6.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_7.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_8.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/ce_msp_run_9.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_0.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_1.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_2.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_3.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_4.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_5.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_6.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_7.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_8.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "models/phase3/ustc/open_set/supcon_proto_run_9.pt",
+      "status": "EXCLUDED historical artifact"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "scripts/phase3/run_all_ustc_open_set.sh",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "scripts/phase3/run_ustc_open_set.py",
+      "status": "PASS"
+    },
+    {
+      "manifest": "artifacts/phase3/ustc/open_set/open_set_sha256.txt",
+      "path": "scripts/phase3/summarize_ustc_open_set.py",
+      "status": "PASS"
+    }
+  ],
+  "companion_imports": [
+    {
+      "consumer": "scripts/paper/compute_model_complexity.py",
+      "module": "scripts/phase3/run_ustc_open_set.py",
+      "status": "present; parsed, not imported"
+    },
+    {
+      "consumer": "scripts/phase4/run_inference_service.py",
+      "module": "scripts/phase3/run_ustc_open_set.py",
+      "status": "present; parsed, not imported"
+    }
+  ],
+  "warnings": [
+    "No applicable project license; public redistribution requires author licensing confirmation.",
+    "No manuscript to independently verify author-supplied title, email or ORCIDs; email omitted.",
+    "Unused original config/datasets.json invalid (concatenated JSON); excluded unchanged.",
+    "Exact frozen audit/service blocked without original omitted model/data artifacts; CUDA wheel source unresolved.",
+    "Original scientific audit is PARTIAL: controller/PCAP IAT agreement NOT_VERIFIED.",
+    "Research/Git metadata snapshot excludes environment/vendor/private trees; large datasets/checkpoints not reread for content hashes.",
+    "No datasets, checkpoints, inference, scientific summary/statistical scripts, installations or network experiments executed."
+  ],
+  "documentation": {
+    "every_copied_file_documented": true,
+    "implementation_paths_exist": 46,
+    "documented_python_cli_flags_match_static_parser_declarations": true,
+    "dataset_urls": true,
+    "disclaimer_final": true,
+    "all_orcids_explicitly_missing": true
+  },
+  "comment_removal": {
+    "removed_tokens": 5,
+    "modified_copies": [
+      "scripts/paper/audit_comment3_4_final.py"
+    ],
+    "preserved_historical_hash_sources": [
+      "scripts/phase2/extract_ustc_flows.py",
+      "scripts/phase2/freeze_ustc_protocol.py",
+      "scripts/phase3/build_ustc_closed_model_ready.py",
+      "scripts/phase3/run_ustc_closed_set.py",
+      "scripts/phase3/run_ustc_open_set.py",
+      "scripts/phase3/summarize_ustc_closed_set.py",
+      "scripts/phase3/summarize_ustc_open_set.py"
+    ],
+    "shell_comments_retained": true
+  },
+  "citation": "YAML parsing and required core metadata checks PASS; full CFF JSON-schema validator unavailable/not run",
+  "file_safety": {
+    "symlinks": 0,
+    "prohibited_formats": 0,
+    "copied_files_over_1_MiB": 0,
+    "non_UTF8_or_NUL_files": 0,
+    "private_key_known_token_patterns_found": 0,
+    "selected_original_files_reviewed_for_sensitive_absolute_paths_before_copy": true,
+    "raw_per_flow_data_or_telemetry_included": false,
+    "note": "Pattern checks plus allowlist/content review; not a guarantee that an automated scanner detects every secret. Original absolute root in integrity reports is explicitly required by packaging task."
+  },
+  "original_integrity": {
+    "selected_source_hashes_unchanged": 164,
+    "research_and_git_file_metadata_unchanged": 3725,
+    "preexisting_git_status_and_diff_unchanged": true,
+    "unchanged_scope": "Research files and root Git internals; environment/vendor/private trees counted but contents not read or snapshotted; atime and directory mtime excluded."
+  },
+  "overall_static_packaging_status": "PASS with documented reproduction/metadata limitations"
+}

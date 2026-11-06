@@ -1,0 +1,16 @@
+{
+  "measurement": "whole_device_gpu_memory",
+  "accounting_note": "Per-process nvidia-smi used_memory was unavailable under the current environment. Incremental whole-device memory was measured with the inference service as the only intentional CUDA workload.",
+  "baseline_samples": 20,
+  "baseline_memory_mib_mean": 0.0,
+  "baseline_memory_mib_max": 0.0,
+  "loaded_samples": 150,
+  "total_memory_mib_mean": 233.0,
+  "total_memory_mib_p50": 233.0,
+  "total_memory_mib_p95": 233.0,
+  "total_memory_mib_max": 233.0,
+  "incremental_memory_mib_mean": 233.0,
+  "incremental_memory_mib_p50": 233.0,
+  "incremental_memory_mib_p95": 233.0,
+  "incremental_memory_mib_max": 233.0
+}

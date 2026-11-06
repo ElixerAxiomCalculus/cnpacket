@@ -1,0 +1,20 @@
+stage,dataset,experiment,method,metric,mean,std,unit,source
+3A,CICIDS2017,Random stratified split,Random Forest,Macro-F1,0.998078,4.7e-05,fraction,Phase 3A.1 frozen results
+3A,CICIDS2017,Random stratified split,XGBoost,Macro-F1,0.998888,1.6e-05,fraction,Phase 3A.1 frozen results
+3A,CICIDS2017,Capture-day holdout,Random Forest,Equal-day Macro-F1,0.529178,,fraction,Phase 3A.2 frozen results
+3A,CICIDS2017,Capture-day holdout,XGBoost,Equal-day Macro-F1,0.500492,,fraction,Phase 3A.2 frozen results
+3B,ISCXVPN2016,Capture-fold sequence classification,CNN-BiLSTM,Macro-F1,0.375958,0.078866,fraction,Phase 3B.1 frozen results
+3B,ISCXVPN2016,Common-cohort early sequence N=20,CNN-BiLSTM,Macro-F1,0.467906,0.13101,fraction,Phase 3B.2 frozen results
+3C,USTC-TFC2016,10-family closed set,CNN-BiLSTM,Macro-F1,0.738051,0.012824,fraction,Phase 3C frozen results
+3C,USTC-TFC2016,10-family closed set,CNN-BiLSTM,Balanced accuracy,0.806591,0.012681,fraction,Phase 3C frozen results
+3C,USTC-TFC2016,10-family closed set,CNN-BiLSTM,Macro ROC-AUC,0.962743,0.005594,fraction,Phase 3C frozen results
+3D,USTC-TFC2016,Zero-shot open set,CE + MSP,Unknown AUROC,0.625537,0.10572,fraction,artifacts/phase3/ustc/open_set/zero_shot_summary.csv
+3D,USTC-TFC2016,Zero-shot open set,SupCon + prototype,Unknown AUROC,0.652948,0.191855,fraction,artifacts/phase3/ustc/open_set/zero_shot_summary.csv
+3D,USTC-TFC2016,Zero-shot open set,CE + MSP,Open-set Macro-F1,0.557808,0.129792,fraction,artifacts/phase3/ustc/open_set/zero_shot_summary.csv
+3D,USTC-TFC2016,Zero-shot open set,SupCon + prototype,Open-set Macro-F1,0.585035,0.160692,fraction,artifacts/phase3/ustc/open_set/zero_shot_summary.csv
+3D,USTC-TFC2016,Few-shot adaptation K=5,SupCon + prototype,Nine-family Macro-F1,0.674043,0.063215,fraction,artifacts/phase3/ustc/open_set/few_shot_summary.csv
+3D,USTC-TFC2016,Few-shot adaptation K=5,SupCon + prototype,Target-family F1,0.439168,0.301118,fraction,artifacts/phase3/ustc/open_set/few_shot_summary.csv
+4,Mininet,SDN feature path,Feature collection,Controller decision latency,107.975,41.972,microseconds,artifacts/phase4/benchmark/phase4_benchmark_summary.json
+4,Mininet,SDN inference path,SupCon inference service,Controller decision latency,3810.099,839.272,microseconds,artifacts/phase4/benchmark/phase4_benchmark_summary.json
+4,Mininet,SDN inference path,CNN-BiLSTM encoder,Model inference latency,1485.059,368.098,microseconds,artifacts/phase4/benchmark/phase4_benchmark_summary.json
+4,Mininet,SDN inference path,SupCon inference service,Incremental GPU memory,233.0,0.0,MiB,artifacts/phase4/benchmark/gpu_memory_summary.json

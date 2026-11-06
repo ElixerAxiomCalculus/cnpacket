@@ -1,0 +1,67 @@
+{
+  "dataset": "CICIDS2017",
+  "task": "binary_benign_vs_attack",
+  "protocol": "frozen_70_15_15_benchmark",
+  "feature_count": 78,
+  "threshold": 0.5,
+  "threads": 2,
+  "seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "random_forest": {
+    "selection_basis": "bounded-memory pilot configuration frozen after initial benchmark exposure",
+    "n_estimators": 50,
+    "criterion": "gini",
+    "max_depth": 16,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "max_samples": 0.5,
+    "bootstrap": true,
+    "class_weight": "balanced_subsample"
+  },
+  "xgboost": {
+    "selection_basis": "validation-only pilot; test partition not evaluated before freezing",
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "logloss",
+      "aucpr"
+    ],
+    "tree_method": "hist",
+    "max_bin": 128,
+    "max_depth": 8,
+    "eta": 0.08,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 2.0,
+    "lambda": 1.0,
+    "alpha": 0.0,
+    "scale_pos_weight": "training_benign_over_training_attack",
+    "num_boost_round": 500,
+    "early_stopping_rounds": 40,
+    "early_stopping_metric": "validation_aucpr"
+  },
+  "reporting": {
+    "repetitions": 5,
+    "summary": "mean_and_sample_standard_deviation",
+    "metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "weighted_f1",
+      "attack_precision",
+      "attack_recall",
+      "attack_f1",
+      "roc_auc",
+      "average_precision",
+      "false_positive_rate",
+      "false_negative_rate",
+      "training_seconds",
+      "batch_inference_microseconds_per_sample",
+      "model_size_bytes"
+    ]
+  }
+}

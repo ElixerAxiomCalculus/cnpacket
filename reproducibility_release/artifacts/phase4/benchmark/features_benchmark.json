@@ -1,0 +1,52 @@
+{
+  "mode": "features",
+  "network_trials": [
+    {
+      "trial": 0,
+      "packet_loss_percent": 0.0,
+      "ping_average_rtt_ms": 7.292,
+      "iperf_return_code": 0,
+      "iperf_throughput_mbit_s": 94.8
+    },
+    {
+      "trial": 1,
+      "packet_loss_percent": 0.0,
+      "ping_average_rtt_ms": 6.568,
+      "iperf_return_code": 0,
+      "iperf_throughput_mbit_s": 94.8
+    },
+    {
+      "trial": 2,
+      "packet_loss_percent": 0.0,
+      "ping_average_rtt_ms": 6.441,
+      "iperf_return_code": 0,
+      "iperf_throughput_mbit_s": 94.7
+    },
+    {
+      "trial": 3,
+      "packet_loss_percent": 0.0,
+      "ping_average_rtt_ms": 6.526,
+      "iperf_return_code": 0,
+      "iperf_throughput_mbit_s": 94.5
+    },
+    {
+      "trial": 4,
+      "packet_loss_percent": 0.0,
+      "ping_average_rtt_ms": 6.735,
+      "iperf_return_code": 0,
+      "iperf_throughput_mbit_s": 94.8
+    }
+  ],
+  "microflows": {
+    "requested": 500,
+    "completed": 500,
+    "failures": 0,
+    "latency_ms_mean": 12.813721503999998,
+    "latency_ms_std": 0.4006209088052068,
+    "latency_ms_p50": 12.73725,
+    "latency_ms_p95": 13.193791799999998,
+    "latency_ms_p99": 14.49829078
+  },
+  "ping_average_rtt_ms_mean": 6.7124,
+  "iperf_throughput_mbit_s_mean": 94.72
+}

@@ -1,0 +1,106 @@
+{
+  "dataset": "USTC-TFC2016",
+  "protocol_version": 1,
+  "experiment": "open_set_and_few_shot_malware_family_classification",
+  "seed": 20261011,
+  "rotation_source": "artifacts/phase2/ustc_protocol.json",
+  "support_source": "artifacts/phase2/ustc_fewshot_support.csv",
+  "model_ready_source": "artifacts/phase3/ustc/closed_set/ustc_closed_model_ready.parquet",
+  "runs": 10,
+  "input": {
+    "minimum_sequence_length": 3,
+    "maximum_sequence_length": 50,
+    "channels": [
+      "signed_packet_size",
+      "interarrival_time"
+    ],
+    "payload_bytes_used": false,
+    "endpoint_addresses_used": false,
+    "endpoint_ports_used": false,
+    "protocol_identifier_used": false,
+    "normalization": "fit using known-family training flows only",
+    "padding": "right zero padding",
+    "recurrent_length_handling": "packed sequence"
+  },
+  "encoder": {
+    "architecture": "cnn_bilstm",
+    "conv_channels": 64,
+    "kernel_size": 3,
+    "bilstm_hidden_size_per_direction": 64,
+    "embedding_dimension": 128
+  },
+  "common_training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "amp": false,
+    "dataloader_workers": 0,
+    "device": "cuda:0"
+  },
+  "ce_msp": {
+    "training_batch_size": 512,
+    "loss": "inverse-frequency class-weighted cross entropy",
+    "maximum_epochs": 40,
+    "early_stopping_metric": "known_validation_macro_f1",
+    "early_stopping_patience": 8,
+    "early_stopping_min_delta": 0.0001,
+    "unknown_score": "1 - maximum softmax probability"
+  },
+  "supcon_proto": {
+    "training_batch_size": 256,
+    "temperature": 0.07,
+    "sampling": "inverse-frequency weighted sampling with replacement",
+    "maximum_epochs": 40,
+    "early_stopping_metric": "known_validation_nearest_prototype_macro_f1",
+    "early_stopping_patience": 8,
+    "early_stopping_min_delta": 0.0001,
+    "embedding_normalization": "L2",
+    "prototype": "L2-normalized mean of L2-normalized known-training embeddings",
+    "distance": "one minus cosine similarity"
+  },
+  "threshold_selection": {
+    "data": [
+      "known closed_split=validation",
+      "calibration-unknown adaptation_partition=calibration_pool"
+    ],
+    "target_unknown_used": false,
+    "objective": "maximize binary known-vs-unknown balanced accuracy equivalent to Youden J",
+    "tie_break": "highest unknown recall then lowest known false-rejection rate"
+  },
+  "zero_shot_evaluation": {
+    "known": "known families closed_split=test",
+    "unknown": "target family adaptation_partition=query_pool",
+    "metrics": [
+      "unknown_detection_auroc",
+      "unknown_detection_average_precision",
+      "known_false_rejection_rate",
+      "unknown_recall",
+      "open_set_macro_f1",
+      "known_family_macro_f1"
+    ]
+  },
+  "few_shot": {
+    "method": "supcon_proto",
+    "k": [
+      1,
+      5,
+      10
+    ],
+    "support": "frozen nested support IDs",
+    "adaptation": "add target-family prototype without gradient updates",
+    "query": "target family adaptation_partition=query_pool",
+    "metrics": [
+      "nine_family_macro_f1",
+      "target_family_precision",
+      "target_family_recall",
+      "target_family_f1",
+      "thresholded_nine_family_macro_f1"
+    ]
+  },
+  "reporting": {
+    "primary_zero_shot_aggregation": "mean and sample standard deviation across ten target-family rotations",
+    "primary_few_shot_aggregation": "mean and sample standard deviation across ten target-family rotations",
+    "rotation_standard_deviation_interpretation": "between-target-family variability, not stochastic-seed variability"
+  }
+}

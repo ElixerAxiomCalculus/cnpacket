@@ -1,0 +1,13 @@
+k,metric,n,mean,sample_sd,saved_mean,saved_sample_sd,verified,variability
+1,target_precision,10,0.49038588042616404,0.3063947377090854,0.4903858804261641,0.3063947377090854,True,between-target-family task variability; no optimal-K claim
+1,target_recall,10,0.26395282918056906,0.21873019881859396,0.263952829180569,0.2187301988185939,True,between-target-family task variability; no optimal-K claim
+1,target_f1,10,0.2961196342668593,0.263053110916156,0.2961196342668593,0.263053110916156,True,between-target-family task variability; no optimal-K claim
+1,nine_family_macro_f1,10,0.6584256678450755,0.09055472200211168,0.6584256678450754,0.0905547220021116,True,between-target-family task variability; no optimal-K claim
+5,target_precision,10,0.5790432357869376,0.37178502038918904,0.5790432357869376,0.371785020389189,True,between-target-family task variability; no optimal-K claim
+5,target_recall,10,0.4061102654738267,0.27428168753191723,0.4061102654738267,0.2742816875319172,True,between-target-family task variability; no optimal-K claim
+5,target_f1,10,0.43916802687321915,0.3011182464831745,0.4391680268732192,0.3011182464831745,True,between-target-family task variability; no optimal-K claim
+5,nine_family_macro_f1,10,0.6740432021546054,0.06321465545771764,0.6740432021546054,0.0632146554577176,True,between-target-family task variability; no optimal-K claim
+10,target_precision,10,0.5562633924920646,0.3671321067057075,0.5562633924920646,0.3671321067057075,True,between-target-family task variability; no optimal-K claim
+10,target_recall,10,0.38258801273825777,0.2895629849764433,0.3825880127382577,0.2895629849764433,True,between-target-family task variability; no optimal-K claim
+10,target_f1,10,0.42281179949350256,0.3120407061100049,0.4228117994935025,0.3120407061100049,True,between-target-family task variability; no optimal-K claim
+10,nine_family_macro_f1,10,0.6717354724306633,0.06618879031175649,0.6717354724306633,0.0661887903117564,True,between-target-family task variability; no optimal-K claim

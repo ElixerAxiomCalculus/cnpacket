@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this code reproducibility package and its associated manuscript using the author-provided title and authors below. Publication and archive identifiers are pending."
+type: software
+title: "Leakage-Aware Evaluation of Payload-Free Malware Classification Across Unseen Families and SDN Deployment"
+authors:
+  - family-names: James
+    given-names: Arush
+    affiliation: "Vellore Institute of Technology, Vellore, India"
+  - family-names: Chaudhary
+    given-names: Rohan
+    affiliation: "Vellore Institute of Technology, Vellore, India"
+  - family-names: Mondal
+    given-names: Sayak
+    affiliation: "Vellore Institute of Technology, Vellore, India"
+  - family-names: Kalaavathi
+    given-names: "B."
+    affiliation: "Vellore Institute of Technology, Vellore, India"
+abstract: "Selected implementation, frozen experiment protocols, aggregate evidence and reproduction documentation for leakage-aware payload-free network classification and synthetic SDN overhead measurement. Datasets and trained weights are excluded. Metadata is author supplied; publication status, ORCIDs, licensing and archive identifiers require confirmation."
+keywords:
+  - reproducibility
+  - network traffic classification
+  - open-set recognition
+  - software-defined networking

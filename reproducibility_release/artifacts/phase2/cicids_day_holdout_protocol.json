@@ -1,0 +1,87 @@
+{
+  "dataset": "CICIDS2017",
+  "protocol_version": 1,
+  "grouping_unit": "capture_day",
+  "primary_target": "binary_label",
+  "benign_label": 0,
+  "attack_label": 1,
+  "runs": [
+    {
+      "run": 0,
+      "test_days": [
+        "Monday"
+      ],
+      "validation_days": [
+        "Tuesday"
+      ],
+      "training_days": [
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "evaluation_scope": "benign_only_false_positive_challenge"
+    },
+    {
+      "run": 1,
+      "test_days": [
+        "Tuesday"
+      ],
+      "validation_days": [
+        "Wednesday"
+      ],
+      "training_days": [
+        "Monday",
+        "Thursday",
+        "Friday"
+      ],
+      "evaluation_scope": "binary_day_holdout"
+    },
+    {
+      "run": 2,
+      "test_days": [
+        "Wednesday"
+      ],
+      "validation_days": [
+        "Thursday"
+      ],
+      "training_days": [
+        "Monday",
+        "Tuesday",
+        "Friday"
+      ],
+      "evaluation_scope": "binary_day_holdout"
+    },
+    {
+      "run": 3,
+      "test_days": [
+        "Thursday"
+      ],
+      "validation_days": [
+        "Friday"
+      ],
+      "training_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "evaluation_scope": "binary_day_holdout"
+    },
+    {
+      "run": 4,
+      "test_days": [
+        "Friday"
+      ],
+      "validation_days": [
+        "Tuesday"
+      ],
+      "training_days": [
+        "Monday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "evaluation_scope": "binary_day_holdout"
+    }
+  ],
+  "normalization_policy": "Fit every scaler and feature transformation using training data only",
+  "imbalance_policy": "No preprocessing downsampling. Class weighting or sampling is allowed only inside a training partition."
+}

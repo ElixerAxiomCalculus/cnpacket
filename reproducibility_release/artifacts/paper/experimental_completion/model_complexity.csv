@@ -1,0 +1,8 @@
+scenario,valid_sequence_packets,padded_sequence_packets,trainable_parameters,convolution_macs,bilstm_macs,classifier_macs,total_macs,arithmetic_flops
+zero_shot_8_prototypes,5,50,67008,19200,327680,1024,347904,695808
+few_shot_9_prototypes,5,50,67008,19200,327680,1152,348032,696064
+zero_shot_8_prototypes,20,50,67008,19200,1310720,1024,1330944,2661888
+few_shot_9_prototypes,20,50,67008,19200,1310720,1152,1331072,2662144
+zero_shot_8_prototypes,50,50,67008,19200,3276800,1024,3297024,6594048
+few_shot_9_prototypes,50,50,67008,19200,3276800,1152,3297152,6594304
+closed_set_linear_10_class,50,50,68298,19200,3276800,1280,3297280,6594560

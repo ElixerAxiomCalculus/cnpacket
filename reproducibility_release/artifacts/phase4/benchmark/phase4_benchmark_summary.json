@@ -1,0 +1,166 @@
+{
+  "network": [
+    {
+      "mode": "forwarding",
+      "trials": 5,
+      "packet_loss_mean_percent": 0.0,
+      "ping_rtt_ms_mean": 6.863200000000001,
+      "ping_rtt_ms_std": 0.3383241049644556,
+      "throughput_mbit_s_mean": 94.76000000000002,
+      "throughput_mbit_s_std": 0.33615472627942833,
+      "microflow_rtt_ms_mean": 12.964296352,
+      "microflow_rtt_ms_std": 0.34166243700740034,
+      "microflow_rtt_ms_p50": 12.923702,
+      "microflow_rtt_ms_p95": 13.464543549999998,
+      "microflow_rtt_ms_p99": 14.49201383
+    },
+    {
+      "mode": "features",
+      "trials": 5,
+      "packet_loss_mean_percent": 0.0,
+      "ping_rtt_ms_mean": 6.7124,
+      "ping_rtt_ms_std": 0.341211517976753,
+      "throughput_mbit_s_mean": 94.72,
+      "throughput_mbit_s_std": 0.13038404810405155,
+      "microflow_rtt_ms_mean": 12.813721503999998,
+      "microflow_rtt_ms_std": 0.4006209088052068,
+      "microflow_rtt_ms_p50": 12.73725,
+      "microflow_rtt_ms_p95": 13.193791799999998,
+      "microflow_rtt_ms_p99": 14.49829078
+    },
+    {
+      "mode": "inference",
+      "trials": 5,
+      "packet_loss_mean_percent": 0.0,
+      "ping_rtt_ms_mean": 6.769,
+      "ping_rtt_ms_std": 0.2720321672155702,
+      "throughput_mbit_s_mean": 94.64000000000001,
+      "throughput_mbit_s_std": 0.15165750888102988,
+      "microflow_rtt_ms_mean": 12.79327705,
+      "microflow_rtt_ms_std": 0.3030202650773353,
+      "microflow_rtt_ms_p50": 12.747601,
+      "microflow_rtt_ms_p95": 13.0410647,
+      "microflow_rtt_ms_p99": 14.058848949999996
+    }
+  ],
+  "pipeline": {
+    "features": {
+      "records": 505,
+      "feature_total_us": {
+        "count": 505,
+        "mean": 53.55663960396039,
+        "std": 15.518388310094346,
+        "p50": 48.472,
+        "p95": 79.9168,
+        "p99": 122.83907999999983,
+        "min": 38.434,
+        "max": 151.002
+      },
+      "feature_last_packet_us": {
+        "count": 505,
+        "mean": 13.8167900990099,
+        "std": 5.364997041329399,
+        "p50": 12.697,
+        "p95": 24.330199999999994,
+        "p99": 31.737039999999986,
+        "min": 5.569,
+        "max": 54.031
+      },
+      "controller_decision_us": {
+        "count": 505,
+        "mean": 107.97534257425743,
+        "std": 41.97186444875935,
+        "p50": 97.841,
+        "p95": 182.8746,
+        "p99": 241.41315999999998,
+        "min": 42.687,
+        "max": 499.982
+      }
+    },
+    "inference": {
+      "records": 505,
+      "feature_total_us": {
+        "count": 505,
+        "mean": 50.85062772277228,
+        "std": 14.8748479465359,
+        "p50": 48.425000000000004,
+        "p95": 65.79899999999999,
+        "p99": 95.16391999999989,
+        "min": 37.217,
+        "max": 259.331
+      },
+      "feature_last_packet_us": {
+        "count": 505,
+        "mean": 12.37426732673267,
+        "std": 10.562658131145687,
+        "p50": 11.07,
+        "p95": 16.6248,
+        "p99": 25.427079999999957,
+        "min": 5.795,
+        "max": 210.193
+      },
+      "inference_roundtrip_us": {
+        "count": 505,
+        "mean": 3640.5734554455444,
+        "std": 833.8032478051731,
+        "p50": 3460.287,
+        "p95": 5481.401399999999,
+        "p99": 6496.51744,
+        "min": 2277.089,
+        "max": 8242.082
+      },
+      "service_us": {
+        "count": 505,
+        "mean": 2922.4607603960394,
+        "std": 796.1892537508387,
+        "p50": 2737.989,
+        "p95": 4754.900399999997,
+        "p99": 5836.818119999999,
+        "min": 1729.168,
+        "max": 7447.15
+      },
+      "model_us": {
+        "count": 505,
+        "mean": 1485.059475247525,
+        "std": 368.0983855552815,
+        "p50": 1389.683,
+        "p95": 1945.1511999999998,
+        "p99": 2422.9878,
+        "min": 1047.666,
+        "max": 5874.935
+      },
+      "controller_decision_us": {
+        "count": 505,
+        "mean": 3810.0992732673267,
+        "std": 839.272378786712,
+        "p50": 3629.372,
+        "p95": 5636.087799999998,
+        "p99": 6671.421039999998,
+        "min": 2404.238,
+        "max": 8437.347
+      }
+    }
+  },
+  "overhead_vs_forwarding": {
+    "features": {
+      "ping_rtt_delta_ms": -0.15080000000000116,
+      "throughput_delta_mbit_s": -0.040000000000020464,
+      "throughput_delta_percent": -0.04221190375688102,
+      "microflow_p50_delta_ms": -0.18645200000000095,
+      "microflow_p95_delta_ms": -0.2707517500000005,
+      "microflow_p99_delta_ms": 0.00627695000000017
+    },
+    "inference": {
+      "ping_rtt_delta_ms": -0.09420000000000073,
+      "throughput_delta_mbit_s": -0.12000000000000455,
+      "throughput_delta_percent": -0.1266357112705831,
+      "microflow_p50_delta_ms": -0.17610100000000095,
+      "microflow_p95_delta_ms": -0.42347884999999863,
+      "microflow_p99_delta_ms": -0.4331648800000032
+    }
+  },
+  "interpretation": {
+    "pipeline_latency_reference": "processing after the fifth observed packet",
+    "synthetic_accuracy_claim": false
+  }
+}

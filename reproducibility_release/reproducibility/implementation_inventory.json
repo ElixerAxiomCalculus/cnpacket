@@ -1,0 +1,742 @@
+[
+  {
+    "path": "controller/l2_learning.py",
+    "purpose": "Reference L2 learning switch; companion inspected by frozen feature audit",
+    "inputs": "Ryu OpenFlow 1.3 events",
+    "outputs": "Forwarding FlowMod/PacketOut messages",
+    "imports": [
+      "ryu.base",
+      "ryu.controller",
+      "ryu.controller.handler",
+      "ryu.lib.packet",
+      "ryu.ofproto"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "controller/phase4_monitor.py",
+    "purpose": "L2 forwarding with feature extraction, five-packet HTTP inference and telemetry",
+    "inputs": "OpenFlow events; PHASE4_* environment; optional localhost inference service",
+    "outputs": "FlowMod/PacketOut; PHASE4_METRICS_PATH JSONL (wrapper supplies release-local path)",
+    "imports": [
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "ryu.base",
+      "ryu.controller",
+      "ryu.controller.handler",
+      "ryu.lib.packet",
+      "ryu.ofproto",
+      "time",
+      "urllib.request"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "paired_open_set_wilcoxon.py",
+    "purpose": "Pair AUROCs by target/seed; two-sided Wilcoxon test across ten target families",
+    "inputs": "results_directory with CE/SupCon JSON reports; SciPy",
+    "outputs": "--output CSV (default paired_open_set_auroc.csv); W/p and paired summary printed",
+    "imports": [
+      "argparse",
+      "collections",
+      "csv",
+      "json",
+      "pathlib",
+      "scipy.stats",
+      "statistics"
+    ],
+    "arguments": [
+      "parser.add_argument('results_directory', type=Path)",
+      "parser.add_argument('--output', type=Path, default=Path('paired_open_set_auroc.csv'))"
+    ]
+  },
+  {
+    "path": "scripts/paper/audit_comment3_4_final.py",
+    "purpose": "Frozen original/N=5 audit, threshold comparison, support nesting and feature-code audit",
+    "inputs": "Original USTC checkpoints/data/reports/predictions/checksums; phase2/3/4 sources; --root",
+    "outputs": "artifacts/paper/mentor_comment3_4_final/ tables, audit log, JSON and original hashes; no training",
+    "imports": [
+      "__future__",
+      "argparse",
+      "ast",
+      "csv",
+      "hashlib",
+      "importlib.util",
+      "json",
+      "numpy",
+      "os",
+      "pandas",
+      "pathlib",
+      "pyarrow.parquet",
+      "run_ustc_closed_set",
+      "run_ustc_open_set",
+      "sklearn.metrics",
+      "statistics",
+      "sys",
+      "torch",
+      "torch.nn.functional",
+      "traceback",
+      "warnings"
+    ],
+    "arguments": [
+      "parser.add_argument('root', nargs='?')",
+      "parser.add_argument('--root', dest='root_option')",
+      "parser.add_argument('root', nargs='?', help='legacy positional repository root')",
+      "parser.add_argument('--root', dest='root_option', help='repository root (default: .)')",
+      "parser.add_argument('--device', choices=('auto', 'cpu', 'cuda'), default='auto')",
+      "parser.add_argument('--batch-size', type=int, default=512)",
+      "parser.add_argument('--threads', type=int, default=4, help='CPU inference threads')"
+    ]
+  },
+  {
+    "path": "scripts/paper/audit_review2_experiments.py",
+    "purpose": "Check experiment acceptance fields and historical SHA-256 manifests",
+    "inputs": "Closed/open reports, confusion/complexity summaries, SDN/GPU summaries and original manifests",
+    "outputs": "artifacts/paper/experimental_completion/review2_experiment_acceptance.csv; stdout; missing excluded files prevent full acceptance",
+    "imports": [
+      "json",
+      "pandas",
+      "pathlib",
+      "sys"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/paper/build_closed_set_confusion_matrix.py",
+    "purpose": "Aggregate and plot normalized confusion matrices across closed seeds",
+    "inputs": "Five original closed *_report.json files",
+    "outputs": "artifacts/paper/experimental_completion/closed_set_confusion_{mean,std,sources}.csv and PNG",
+    "imports": [
+      "json",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/paper/build_results_package.py",
+    "purpose": "Write paper tables/plots from hard-coded frozen arrays",
+    "inputs": "Embedded metric/plot arrays in this file",
+    "outputs": "artifacts/paper/master_results.csv, claims_matrix.csv, results_digest.md and figures; not a fresh experiment",
+    "imports": [
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/paper/compute_model_complexity.py",
+    "purpose": "Measure encoder parameter/operation counts and checkpoint size",
+    "inputs": "SupCon rotation-0 checkpoint; open protocol; run_ustc_open_set module",
+    "outputs": "artifacts/paper/experimental_completion/model_complexity.{csv,json}",
+    "imports": [
+      "csv",
+      "json",
+      "pathlib",
+      "run_ustc_open_set",
+      "sys",
+      "torch",
+      "torch.nn"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/audit_cicids2017.py",
+    "purpose": "Inspect eight CSV schemas, labels and counts",
+    "inputs": "data/interim/cicids2017/raw_csv/",
+    "outputs": "artifacts/phase2/cicids_audit.json, cicids_file_summary.csv, cicids_class_distribution.csv",
+    "imports": [
+      "collections",
+      "csv",
+      "json",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/audit_iscxvpn_archives.py",
+    "purpose": "Inventory ZIP capture members and activity/domain labels",
+    "inputs": "data/raw/iscxvpn2016/*.zip",
+    "outputs": "artifacts/phase2/iscxvpn_capture_manifest.{csv,json}, iscxvpn_category_summary.csv",
+    "imports": [
+      "collections",
+      "csv",
+      "json",
+      "pathlib",
+      "zipfile"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/audit_raw_datasets.py",
+    "purpose": "Inventory and hash independently obtained raw dataset files",
+    "inputs": "data/raw/",
+    "outputs": "artifacts/phase2/raw_dataset_inventory.{csv,json}",
+    "imports": [
+      "csv",
+      "hashlib",
+      "json",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/extract_iscxvpn_flows.py",
+    "purpose": "Extract selected captures with 7z; reconstruct packet sequences with inherited folds",
+    "inputs": "ISCX ZIPs and iscxvpn_protocol_manifest.csv",
+    "outputs": "data/processed/iscxvpn2016/flows/; artifacts/phase2/iscx_flow_* summaries, statistics and logs",
+    "imports": [
+      "argparse",
+      "collections",
+      "csv",
+      "dataclasses",
+      "duckdb",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.parquet",
+      "shutil",
+      "subprocess",
+      "zipfile"
+    ],
+    "arguments": [
+      "parser.add_argument('--only-capture', default=None)",
+      "parser.add_argument('--dry-run', action='store_true')",
+      "parser.add_argument('--resume', action='store_true')"
+    ]
+  },
+  {
+    "path": "scripts/phase2/extract_ustc_flows.py",
+    "purpose": "Reconstruct bidirectional idle-delimited packet sequences via TShark",
+    "inputs": "USTC interim PCAPs and ustc_capture_manifest.csv",
+    "outputs": "data/processed/ustc-tfc2016/flows/; artifacts/phase2/ustc_flow_* summaries/protocol (dry-run uses separate paths)",
+    "imports": [
+      "argparse",
+      "collections",
+      "csv",
+      "dataclasses",
+      "duckdb",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.parquet",
+      "shutil",
+      "subprocess"
+    ],
+    "arguments": [
+      "parser.add_argument('--only-class', default=None)",
+      "parser.add_argument('--dry-run', action='store_true')"
+    ]
+  },
+  {
+    "path": "scripts/phase2/extract_ustc_tfc2016.py",
+    "purpose": "Extract provider PCAP and 7z files into class directories",
+    "inputs": "data/raw/ustc-tfc2016/Benign/ and Malware/",
+    "outputs": "data/interim/ustc-tfc2016/pcap/; artifacts/phase2/ustc_capture_manifest.csv",
+    "imports": [
+      "collections",
+      "csv",
+      "hashlib",
+      "pathlib",
+      "py7zr",
+      "shutil"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/finalize_cicids2017_lowmem.py",
+    "purpose": "Bounded-memory finalization using dual feature hashes and the frozen split seed",
+    "inputs": "Complete data/interim/cicids2017/stage/; artifacts/phase2/cicids_audit.json",
+    "outputs": "stage_hashed/, cicids2017_lowmem.duckdb, data/processed/cicids2017/cicids2017_clean.parquet; artifacts/phase2/cicids_split_assignments.parquet and summaries",
+    "imports": [
+      "duckdb",
+      "json",
+      "pandas",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.parquet",
+      "shutil"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/freeze_iscxvpn_model_protocol.py",
+    "purpose": "Construct model-ready sequences and freeze eligibility/capture cap",
+    "inputs": "ISCX flow Parquets; artifacts/phase2/iscx_flow_capture_summary.csv",
+    "outputs": "data/processed/iscxvpn2016/iscx_model_ready.parquet; artifacts/phase2/iscx_model_manifest.parquet, iscx_model_protocol.json and summary CSVs",
+    "imports": [
+      "hashlib",
+      "json",
+      "pandas",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.dataset",
+      "pyarrow.parquet"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/freeze_iscxvpn_protocol.py",
+    "purpose": "Freeze capture-group activity/domain folds",
+    "inputs": "artifacts/phase2/iscxvpn_capture_manifest.csv",
+    "outputs": "artifacts/phase2/iscxvpn_protocol_manifest.csv, iscxvpn_fold_summary.csv, iscxvpn_cv_protocol.json",
+    "imports": [
+      "collections",
+      "csv",
+      "hashlib",
+      "json",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/freeze_ustc_protocol.py",
+    "purpose": "Freeze representation groups, temporal splits, rotations and nested support IDs",
+    "inputs": "USTC malware flow Parquets",
+    "outputs": "artifacts/phase2/ustc_malware_protocol_manifest.parquet, ustc_protocol.json, ustc_fewshot_support.csv, ustc_malware_protocol_summary.csv",
+    "imports": [
+      "csv",
+      "hashlib",
+      "json",
+      "pandas",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.parquet",
+      "struct"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase2/prepare_cicids2017.py",
+    "purpose": "Stage/clean flow CSVs, remove conflicts/duplicates, construct deterministic splits",
+    "inputs": "Eight raw CSVs",
+    "outputs": "data/interim/cicids2017/stage/, data/processed/cicids2017/cicids2017_clean.parquet; artifacts/phase2 mappings/splits/summaries",
+    "imports": [
+      "duckdb",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pyarrow",
+      "pyarrow.parquet",
+      "re",
+      "shutil"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/build_ustc_closed_model_ready.py",
+    "purpose": "Join flow representations to the frozen malware manifest",
+    "inputs": "USTC flow Parquets and ustc_malware_protocol_manifest.parquet",
+    "outputs": "artifacts/phase3/ustc/closed_set/ustc_closed_model_ready.parquet",
+    "imports": [
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/run_all_cicids_day_holdout.sh",
+    "purpose": "Batch the frozen runs; skip reports passing embedded validation",
+    "inputs": "scripts/phase3/run_cicids_day_holdout.py; .venv-ml/bin/python; existing report checks",
+    "outputs": "Child model/results plus logs/resources at artifacts/phase3/cicids/day_holdout/"
+  },
+  {
+    "path": "scripts/phase3/run_all_iscx_early_sequence.sh",
+    "purpose": "Batch the frozen runs; skip reports passing embedded validation",
+    "inputs": "scripts/phase3/run_iscx_early_sequence.py; .venv-ml/bin/python; existing report checks",
+    "outputs": "Child model/results plus logs/resources at artifacts/phase3/iscx/early_sequence/"
+  },
+  {
+    "path": "scripts/phase3/run_all_iscx_sequence_models.sh",
+    "purpose": "Batch the frozen runs; skip reports passing embedded validation",
+    "inputs": "scripts/phase3/run_iscx_sequence_model.py; .venv-ml/bin/python; existing report checks",
+    "outputs": "Child model/results plus logs/resources at artifacts/phase3/iscx/sequence_models/"
+  },
+  {
+    "path": "scripts/phase3/run_all_ustc_closed_set.sh",
+    "purpose": "Batch the frozen runs; skip reports passing embedded validation",
+    "inputs": "scripts/phase3/run_ustc_closed_set.py; .venv-ml/bin/python; existing report checks",
+    "outputs": "Child model/results plus logs/resources at artifacts/phase3/ustc/closed_set/"
+  },
+  {
+    "path": "scripts/phase3/run_all_ustc_open_set.sh",
+    "purpose": "Batch the frozen runs; skip reports passing embedded validation",
+    "inputs": "scripts/phase3/run_ustc_open_set.py; .venv-ml/bin/python; existing report checks",
+    "outputs": "Child model/results plus logs/resources at artifacts/phase3/ustc/open_set/"
+  },
+  {
+    "path": "scripts/phase3/run_cicids_day_holdout.py",
+    "purpose": "Train/evaluate RF/XGBoost on one day rotation and seed",
+    "inputs": "CICIDS clean Parquet; column/day mappings and tree/day protocols",
+    "outputs": "models/phase3/cicids/day_holdout/; artifacts/phase3/cicids/day_holdout/*_report.json",
+    "imports": [
+      "argparse",
+      "ctypes",
+      "gc",
+      "joblib",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pyarrow.dataset",
+      "sklearn.ensemble",
+      "sklearn.metrics",
+      "time",
+      "xgboost"
+    ],
+    "arguments": [
+      "parser.add_argument('--model', choices=['rf', 'xgb'], required=True)",
+      "parser.add_argument('--run', type=int, choices=[0, 1, 2, 3, 4], required=True)",
+      "parser.add_argument('--seed', type=int, required=True)",
+      "parser.add_argument('--threads', type=int, default=2)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/run_cicids_tree_final.py",
+    "purpose": "Train RF/XGBoost and evaluate binary stratified baseline",
+    "inputs": "CICIDS clean Parquet; column mapping; tree_final_protocol.json",
+    "outputs": "models/phase3/cicids/final/; artifacts/phase3/cicids/final/*_report.json and predictions",
+    "imports": [
+      "argparse",
+      "ctypes",
+      "gc",
+      "joblib",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pyarrow.dataset",
+      "sklearn.ensemble",
+      "sklearn.metrics",
+      "time",
+      "xgboost"
+    ],
+    "arguments": [
+      "parser.add_argument('--model', choices=['rf', 'xgb'], required=True)",
+      "parser.add_argument('--seed', type=int, required=True)",
+      "parser.add_argument('--threads', type=int, default=2)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/run_iscx_early_sequence.py",
+    "purpose": "Train/evaluate each prefix on common \u226550-packet cohort",
+    "inputs": "ISCX model-ready Parquet; phase2/early protocols and common cohort IDs",
+    "outputs": "models/phase3/iscx/early_sequence/; artifacts/phase3/iscx/early_sequence/ reports, predictions, histories",
+    "imports": [
+      "argparse",
+      "hashlib",
+      "json",
+      "numpy",
+      "os",
+      "pandas",
+      "pathlib",
+      "random",
+      "sklearn.metrics",
+      "sklearn.preprocessing",
+      "time",
+      "torch",
+      "torch.nn",
+      "torch.utils.data"
+    ],
+    "arguments": [
+      "parser.add_argument('--sequence-length', type=int, choices=[5, 10, 20, 50], required=True)",
+      "parser.add_argument('--run', type=int, choices=[0, 1, 2, 3, 4], required=True)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/run_iscx_sequence_model.py",
+    "purpose": "Train/evaluate CNN, LSTM, BiLSTM or CNN\u2013BiLSTM on capture folds",
+    "inputs": "ISCX model-ready Parquet; phase2 and sequence_model protocols",
+    "outputs": "models/phase3/iscx/sequence_models/; artifacts/phase3/iscx/sequence_models/ reports, predictions, histories",
+    "imports": [
+      "argparse",
+      "json",
+      "numpy",
+      "os",
+      "pandas",
+      "pathlib",
+      "random",
+      "sklearn.metrics",
+      "sklearn.preprocessing",
+      "time",
+      "torch",
+      "torch.nn",
+      "torch.utils.data"
+    ],
+    "arguments": [
+      "parser.add_argument('--model', choices=['cnn', 'lstm', 'bilstm', 'cnn_bilstm'], required=True)",
+      "parser.add_argument('--run', type=int, choices=[0, 1, 2, 3, 4], required=True)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/run_ustc_closed_set.py",
+    "purpose": "Define CNN\u2013BiLSTM; train/evaluate ten-family closed model",
+    "inputs": "USTC model-ready Parquet; closed_set_protocol.json; --seed",
+    "outputs": "models/phase3/ustc/closed_set/; artifacts/phase3/ustc/closed_set/ reports, predictions, histories",
+    "imports": [
+      "argparse",
+      "json",
+      "math",
+      "numpy",
+      "os",
+      "pandas",
+      "pathlib",
+      "random",
+      "sklearn.metrics",
+      "sklearn.preprocessing",
+      "time",
+      "torch",
+      "torch.nn",
+      "torch.nn.utils.rnn",
+      "torch.utils.data"
+    ],
+    "arguments": [
+      "parser.add_argument('--seed', type=int, required=True)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/run_ustc_open_set.py",
+    "purpose": "Define encoders/prototypes; train, independently calibrate, evaluate open/few-shot tasks",
+    "inputs": "USTC model-ready Parquet; phase2/open protocols and nested supports; --method/--run",
+    "outputs": "models/phase3/ustc/open_set/; artifacts/phase3/ustc/open_set/ method/rotation reports and histories",
+    "imports": [
+      "argparse",
+      "json",
+      "math",
+      "numpy",
+      "os",
+      "pandas",
+      "pathlib",
+      "random",
+      "sklearn.metrics",
+      "time",
+      "torch",
+      "torch.nn",
+      "torch.nn.functional",
+      "torch.nn.utils.rnn",
+      "torch.utils.data"
+    ],
+    "arguments": [
+      "parser.add_argument('--method', choices=['ce_msp', 'supcon_proto'], required=True)",
+      "parser.add_argument('--run', type=int, choices=list(range(10)), required=True)"
+    ]
+  },
+  {
+    "path": "scripts/phase3/summarize_cicids_day_holdout.py",
+    "purpose": "Aggregate holdout days/seeds; separate benign-only day",
+    "inputs": "artifacts/phase3/cicids/day_holdout/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/cicids/day_holdout/day_holdout_runs.csv, day_holdout_day_summary.csv, day_holdout_binary_summary.csv",
+    "imports": [
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/summarize_cicids_tree_final.py",
+    "purpose": "Aggregate repeated stratified baseline reports",
+    "inputs": "artifacts/phase3/cicids/final/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/cicids/final/tree_final_runs.csv, tree_final_summary.csv",
+    "imports": [
+      "json",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/summarize_iscx_early_sequence.py",
+    "purpose": "Aggregate prefixes and paired capture-fold deltas",
+    "inputs": "artifacts/phase3/iscx/early_sequence/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/iscx/early_sequence/early_sequence_{runs,summary,paired_deltas,domain_summary,class_summary}.csv",
+    "imports": [
+      "json",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/summarize_iscx_sequence_models.py",
+    "purpose": "Aggregate architecture, domain and class results",
+    "inputs": "artifacts/phase3/iscx/sequence_models/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/iscx/sequence_models/sequence_model_{runs,summary,domain_summary,class_summary}.csv",
+    "imports": [
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/summarize_ustc_closed_set.py",
+    "purpose": "Aggregate seed and per-family closed metrics",
+    "inputs": "artifacts/phase3/ustc/closed_set/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/ustc/closed_set/closed_set_{runs,summary,class_summary}.csv",
+    "imports": [
+      "json",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase3/summarize_ustc_open_set.py",
+    "purpose": "Aggregate open, paired-target and few-shot results",
+    "inputs": "artifacts/phase3/ustc/open_set/*_report.json; relevant frozen protocol",
+    "outputs": "artifacts/phase3/ustc/open_set/zero_shot_{runs,summary,paired_by_target,paired_summary}.csv; few_shot_{runs,summary}.csv",
+    "imports": [
+      "json",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase4/run_controller_benchmark_mode.sh",
+    "purpose": "Set five-packet monitor mode and launch Ryu; truncate selected telemetry",
+    "inputs": "forwarding/features/inference argument; health endpoint for inference; scripts/run_controller_phase4.sh",
+    "outputs": "artifacts/phase4/benchmark/{mode}_controller_metrics.jsonl; logs/controller.log"
+  },
+  {
+    "path": "scripts/phase4/run_inference_service.py",
+    "purpose": "Serve original rotation-0 SupCon inference over localhost HTTP; verify frozen hashes",
+    "inputs": "models/phase3/ustc/open_set/supcon_proto_run_0.pt; matching report; open protocol/hash manifest; run_ustc_open_set module",
+    "outputs": "HTTP /health and /infer responses on port 8765; process stdout",
+    "imports": [
+      "argparse",
+      "hashlib",
+      "http.server",
+      "json",
+      "numpy",
+      "pathlib",
+      "run_ustc_open_set",
+      "sys",
+      "time",
+      "torch",
+      "torch.nn.functional"
+    ],
+    "arguments": [
+      "parser.add_argument('--host', default='127.0.0.1')",
+      "parser.add_argument('--port', type=int, default=8765)",
+      "parser.add_argument('--device', default='cuda:0')"
+    ]
+  },
+  {
+    "path": "scripts/phase4/run_phase4_benchmark.py",
+    "purpose": "Construct Mininet topology; measure synthetic network and microflow overhead",
+    "inputs": "Active matching controller mode; system Mininet; .venv-ml; TCP helper scripts",
+    "outputs": "artifacts/phase4/benchmark/{mode}_benchmark.json",
+    "imports": [
+      "argparse",
+      "json",
+      "mininet.link",
+      "mininet.net",
+      "mininet.node",
+      "pathlib",
+      "re",
+      "statistics",
+      "sys",
+      "time"
+    ],
+    "arguments": [
+      "parser.add_argument('--mode', choices=['forwarding', 'features', 'inference'], required=True)",
+      "parser.add_argument('--trials', type=int, default=5)",
+      "parser.add_argument('--microflows', type=int, default=500)"
+    ]
+  },
+  {
+    "path": "scripts/phase4/sample_gpu_memory.sh",
+    "purpose": "Sample process GPU memory with nvidia-smi 100 times",
+    "inputs": "PID and caller-specified OUTPUT inside execution workspace",
+    "outputs": "Truncates/writes OUTPUT; not the incremental whole-device summary builder"
+  },
+  {
+    "path": "scripts/phase4/summarize_phase4_benchmark.py",
+    "purpose": "Aggregate network trials and \u2265500 feature/inference records",
+    "inputs": "Three mode benchmark JSONs and controller_metrics.jsonl (telemetry excluded)",
+    "outputs": "artifacts/phase4/benchmark/phase4_benchmark_summary.json, phase4_pipeline_summary.csv",
+    "imports": [
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib"
+    ],
+    "arguments": []
+  },
+  {
+    "path": "scripts/phase4/tcp_microflow_client.py",
+    "purpose": "Generate repeated synthetic request/response connections",
+    "inputs": "Host/port, connection count and request/response sizes",
+    "outputs": "JSON microflow timing summary to stdout",
+    "imports": [
+      "argparse",
+      "json",
+      "numpy",
+      "socket",
+      "time"
+    ],
+    "arguments": [
+      "parser.add_argument('--host', required=True)",
+      "parser.add_argument('--port', type=int, default=5002)",
+      "parser.add_argument('--connections', type=int, required=True)",
+      "parser.add_argument('--request-bytes', type=int, default=256)",
+      "parser.add_argument('--response-bytes', type=int, default=64)"
+    ]
+  },
+  {
+    "path": "scripts/phase4/tcp_microflow_server.py",
+    "purpose": "Accept finite synthetic TCP request/response connections",
+    "inputs": "Host/port, connection count and request/response sizes",
+    "outputs": "Socket responses and stdout status",
+    "imports": [
+      "argparse",
+      "socket"
+    ],
+    "arguments": [
+      "parser.add_argument('--host', default='0.0.0.0')",
+      "parser.add_argument('--port', type=int, default=5002)",
+      "parser.add_argument('--connections', type=int, required=True)",
+      "parser.add_argument('--request-bytes', type=int, default=256)",
+      "parser.add_argument('--response-bytes', type=int, default=64)"
+    ]
+  },
+  {
+    "path": "scripts/run_controller_phase4.sh",
+    "purpose": "Launch Ryu phase-4 monitor with OpenFlow TCP port 6653",
+    "inputs": ".venv-controller/bin/ryu-manager; controller/phase4_monitor.py",
+    "outputs": "logs/controller.log overwritten via tee; active controller"
+  },
+  {
+    "path": "topology/research_topology.py",
+    "purpose": "Original four-host/two-switch Mininet smoke/interactive topology",
+    "inputs": "System Mininet; external controller at localhost:6653; --mode",
+    "outputs": "Transient network, smoke metrics or interactive CLI/stdout",
+    "imports": [
+      "argparse",
+      "mininet.cli",
+      "mininet.link",
+      "mininet.log",
+      "mininet.net",
+      "mininet.node",
+      "subprocess",
+      "time"
+    ],
+    "arguments": [
+      "parser.add_argument('--mode', choices=['smoke', 'interactive'], default='smoke')"
+    ]
+  }
+]

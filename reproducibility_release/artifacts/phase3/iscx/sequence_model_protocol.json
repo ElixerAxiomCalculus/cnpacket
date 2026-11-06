@@ -1,0 +1,73 @@
+{
+  "dataset": "ISCXVPN2016",
+  "protocol_version": 1,
+  "seed": 20261011,
+  "task": "four_class_activity_classification",
+  "sequence_length": 5,
+  "class_names": [
+    "chat",
+    "file_transfer",
+    "streaming",
+    "voip"
+  ],
+  "input": {
+    "channels": [
+      "signed_packet_size",
+      "interarrival_time"
+    ],
+    "sequence_mask": "all primary N=5 positions are valid because eligibility requires at least five packets",
+    "signed_packet_size_normalization": "divide by training-partition RMS without centering to preserve direction sign",
+    "interarrival_time_transform": "log1p then training-partition z-score",
+    "payload_bytes_used": false,
+    "endpoint_addresses_used": false,
+    "endpoint_ports_used": false,
+    "protocol_identifier_used": false
+  },
+  "training": {
+    "batch_size": 256,
+    "dataloader_workers": 2,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.3,
+    "max_epochs": 100,
+    "early_stopping_metric": "validation_macro_f1",
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0001,
+    "class_weighting": "inverse_frequency_balanced",
+    "amp": false,
+    "device": "cuda:0"
+  },
+  "models": {
+    "cnn": {
+      "conv_channels": [64, 128],
+      "kernel_size": 3,
+      "pooling": "global_average"
+    },
+    "lstm": {
+      "hidden_size": 128,
+      "bidirectional": false
+    },
+    "bilstm": {
+      "hidden_size_per_direction": 64,
+      "bidirectional": true
+    },
+    "cnn_bilstm": {
+      "conv_channels": 64,
+      "kernel_size": 3,
+      "hidden_size_per_direction": 64,
+      "bidirectional": true
+    }
+  },
+  "evaluation": {
+    "cross_validation": "frozen five capture-group folds",
+    "validation_selection": "early stopping only",
+    "test_evaluation": "once after restoring best validation checkpoint",
+    "domain_subgroups": [
+      "nonvpn",
+      "vpn"
+    ],
+    "primary_metric": "macro_f1",
+    "report_mean_std_across": "five capture folds"
+  }
+}

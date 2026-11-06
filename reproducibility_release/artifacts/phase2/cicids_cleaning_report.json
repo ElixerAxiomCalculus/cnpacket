@@ -1,0 +1,37 @@
+{
+  "dataset": "CICIDS2017",
+  "protocol_version": 1,
+  "feature_count": 78,
+  "input_rows": 2830743,
+  "invalid_rows_dropped": 2867,
+  "valid_rows_staged": 2827876,
+  "fingerprint": {
+    "representation": "two 64-bit pandas row hashes",
+    "effective_bits": 128,
+    "hash_a": "feature columns in canonical order",
+    "hash_b": "feature columns in reverse order",
+    "purpose": "memory-bounded duplicate and label-conflict detection"
+  },
+  "conflicting_feature_groups": 697,
+  "conflicting_rows_dropped": 6666,
+  "duplicate_rows_dropped": 301806,
+  "final_rows": 2519404,
+  "binary_definition": {
+    "0": "BENIGN",
+    "1": "ATTACK"
+  },
+  "benchmark_split": {
+    "seed": "20261011",
+    "method": "Exact class-stratified 70/15/15 split using deterministic MD5 ordering of stable source row identifiers",
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15
+  },
+  "day_holdout": {
+    "grouping_unit": "capture_day",
+    "runs": 5
+  },
+  "label_repair": "The raw CSV contains U+FFFD literally in the three Web Attack labels. Those labels were mapped deterministically to canonical ASCII class names during staging.",
+  "normalization_policy": "No scaling was performed during preprocessing. All later scalers must be fit on training data only.",
+  "imbalance_policy": "No class downsampling was performed during preprocessing."
+}

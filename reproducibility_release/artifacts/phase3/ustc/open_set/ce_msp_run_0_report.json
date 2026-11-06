@@ -1,0 +1,238 @@
+{
+  "experiment": "ustc_tfc2016_open_set",
+  "method": "ce_msp",
+  "run": 0,
+  "seed": 20261011,
+  "target_unknown_family": "Cridex",
+  "calibration_unknown_family": "Geodo",
+  "known_families": [
+    "Htbot",
+    "Miuref",
+    "Neris",
+    "Nsis-ay",
+    "Shifu",
+    "Tinba",
+    "Virut",
+    "Zeus"
+  ],
+  "partition_counts": {
+    "known_train": 73279,
+    "known_validation": 24425,
+    "known_test": 24428,
+    "calibration_pool": 9161,
+    "target_support_pool": 12329,
+    "target_query_pool": 36986
+  },
+  "normalization": {
+    "valid_training_tokens": 604711,
+    "signed_size_rms": 481.58668588428435,
+    "iat_log1p_mean": 0.313539176112097,
+    "iat_log1p_std": 0.703320941446131
+  },
+  "training_class_counts": [
+    3368,
+    8693,
+    23045,
+    3974,
+    4684,
+    284,
+    22206,
+    7025
+  ],
+  "training_class_weights": [
+    2.7196779251098633,
+    1.0537070035934448,
+    0.39747774600982666,
+    2.3049509525299072,
+    1.9555667638778687,
+    32.253082275390625,
+    0.412495493888855,
+    1.3038967847824097
+  ],
+  "best_epoch": 18,
+  "best_known_validation_macro_f1": 0.8982798346393526,
+  "epochs_completed": 26,
+  "training_seconds": 51.97752865099983,
+  "threshold_calibration": {
+    "threshold": 0.22388124465942383,
+    "calibration_unknown_recall": 0.9617945639122366,
+    "known_false_rejection_rate": 0.347553735926305,
+    "balanced_accuracy": 0.8071204139929659
+  },
+  "zero_shot": {
+    "unknown_detection_auroc": 0.503557787291933,
+    "unknown_detection_average_precision": 0.5616373947464908,
+    "known_false_rejection_rate": 0.3468970034386769,
+    "known_acceptance_rate": 0.6531029965613231,
+    "unknown_recall": 0.5132482560969015,
+    "unknown_miss_rate": 0.4867517439030985,
+    "known_family_macro_f1_without_rejection": 0.8492053694572819,
+    "open_set": {
+      "accuracy": 0.54406161461556,
+      "balanced_accuracy": 0.6776466891404125,
+      "macro_f1": 0.6968217060465907,
+      "confusion_matrix": [
+        [
+          834,
+          2,
+          12,
+          1,
+          0,
+          1,
+          0,
+          1,
+          272
+        ],
+        [
+          0,
+          1394,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1501
+        ],
+        [
+          1178,
+          25,
+          1243,
+          12,
+          78,
+          16,
+          0,
+          0,
+          5130
+        ],
+        [
+          0,
+          2,
+          2,
+          1306,
+          2,
+          0,
+          0,
+          1,
+          12
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1299,
+          2,
+          0,
+          0,
+          258
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          65,
+          0,
+          0,
+          25
+        ],
+        [
+          0,
+          0,
+          103,
+          0,
+          4,
+          0,
+          6308,
+          69,
+          918
+        ],
+        [
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          1981,
+          358
+        ],
+        [
+          18,
+          0,
+          17985,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18983
+        ]
+      ],
+      "per_class": {
+        "Htbot": {
+          "precision": 0.41083743842364534,
+          "recall": 0.742653606411398,
+          "f1": 0.5290199809705043,
+          "support": 1123
+        },
+        "Miuref": {
+          "precision": 0.9796205200281096,
+          "recall": 0.4810213940648723,
+          "f1": 0.6452210136542467,
+          "support": 2898
+        },
+        "Neris": {
+          "precision": 0.06423772609819121,
+          "recall": 0.16180682114032804,
+          "f1": 0.0919650784255697,
+          "support": 7682
+        },
+        "Nsis-ay": {
+          "precision": 0.9893939393939394,
+          "recall": 0.9856603773584905,
+          "f1": 0.987523629489603,
+          "support": 1325
+        },
+        "Shifu": {
+          "precision": 0.9345323741007194,
+          "recall": 0.8321588725176169,
+          "f1": 0.8803795323619112,
+          "support": 1561
+        },
+        "Tinba": {
+          "precision": 0.7738095238095238,
+          "recall": 0.6842105263157895,
+          "f1": 0.7262569832402235,
+          "support": 95
+        },
+        "Virut": {
+          "precision": 1.0,
+          "recall": 0.8522021075385031,
+          "f1": 0.9202042304886944,
+          "support": 7402
+        },
+        "Zeus": {
+          "precision": 0.9653996101364523,
+          "recall": 0.8458582408198121,
+          "f1": 0.9016841147018662,
+          "support": 2342
+        },
+        "unknown": {
+          "precision": 0.6913719634337328,
+          "recall": 0.5132482560969015,
+          "f1": 0.5891407910866968,
+          "support": 36986
+        }
+      }
+    }
+  },
+  "few_shot": null,
+  "peak_gpu_memory_mib": 133.34716796875,
+  "model_path": "models/phase3/ustc/open_set/ce_msp_run_0.pt",
+  "model_size_bytes": 277273,
+  "history_path": "artifacts/phase3/ustc/open_set/ce_msp_run_0_history.csv"
+}

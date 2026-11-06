@@ -1,0 +1,26 @@
+{
+  "dataset": "ISCXVPN2016",
+  "protocol_version": 1,
+  "seed": 20261011,
+  "number_of_folds": 5,
+  "primary_target": "activity",
+  "domain_attribute": "vpn_status",
+  "primary_activities": [
+    "chat",
+    "file_transfer",
+    "streaming",
+    "voip"
+  ],
+  "excluded_activities": {
+    "email": "Only two independent VPN capture groups are available",
+    "p2p": "Only one VPN BitTorrent capture is available and no matched non-VPN P2P capture exists"
+  },
+  "grouping_unit": "capture_file",
+  "fold_assignment": "SHA-256 deterministic ordering within each activity-domain stratum",
+  "rotation": {
+    "test_fold": "r",
+    "validation_fold": "(r + 1) mod 5",
+    "training_folds": "all folds excluding test and validation"
+  },
+  "leakage_policy": "Every flow and packet sequence derived from one capture inherits that capture's fold"
+}

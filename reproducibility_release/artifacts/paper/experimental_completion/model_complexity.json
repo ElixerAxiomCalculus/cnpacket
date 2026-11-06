@@ -1,0 +1,112 @@
+{
+  "counting_convention": {
+    "mac_definition": "one multiplication followed by one accumulation",
+    "flop_definition": "one MAC counted as two arithmetic FLOPs",
+    "included": [
+      "Conv1d multiply-accumulate operations",
+      "BiLSTM input and recurrent matrix multiply-accumulate operations",
+      "linear or prototype similarity multiply-accumulate operations"
+    ],
+    "excluded": [
+      "activation functions",
+      "sigmoid and tanh internal evaluation cost",
+      "bias additions",
+      "normalization",
+      "packing and masking control operations",
+      "memory movement",
+      "HTTP and controller overhead"
+    ]
+  },
+  "architecture": {
+    "encoder_parameters": 67008,
+    "closed_set_parameters": 68298,
+    "embedding_dimension": 128,
+    "conv_in_channels": 2,
+    "conv_out_channels": 64,
+    "conv_kernel_width": 3,
+    "bilstm_input_size": 64,
+    "bilstm_hidden_size_per_direction": 64,
+    "bilstm_bidirectional": true,
+    "supcon_checkpoint_size_bytes": 279029,
+    "supcon_checkpoint_size_kib": 272.4892578125
+  },
+  "scenarios": [
+    {
+      "scenario": "zero_shot_8_prototypes",
+      "valid_sequence_packets": 5,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 327680,
+      "classifier_macs": 1024,
+      "total_macs": 347904,
+      "arithmetic_flops": 695808
+    },
+    {
+      "scenario": "few_shot_9_prototypes",
+      "valid_sequence_packets": 5,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 327680,
+      "classifier_macs": 1152,
+      "total_macs": 348032,
+      "arithmetic_flops": 696064
+    },
+    {
+      "scenario": "zero_shot_8_prototypes",
+      "valid_sequence_packets": 20,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 1310720,
+      "classifier_macs": 1024,
+      "total_macs": 1330944,
+      "arithmetic_flops": 2661888
+    },
+    {
+      "scenario": "few_shot_9_prototypes",
+      "valid_sequence_packets": 20,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 1310720,
+      "classifier_macs": 1152,
+      "total_macs": 1331072,
+      "arithmetic_flops": 2662144
+    },
+    {
+      "scenario": "zero_shot_8_prototypes",
+      "valid_sequence_packets": 50,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 3276800,
+      "classifier_macs": 1024,
+      "total_macs": 3297024,
+      "arithmetic_flops": 6594048
+    },
+    {
+      "scenario": "few_shot_9_prototypes",
+      "valid_sequence_packets": 50,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 67008,
+      "convolution_macs": 19200,
+      "bilstm_macs": 3276800,
+      "classifier_macs": 1152,
+      "total_macs": 3297152,
+      "arithmetic_flops": 6594304
+    },
+    {
+      "scenario": "closed_set_linear_10_class",
+      "valid_sequence_packets": 50,
+      "padded_sequence_packets": 50,
+      "trainable_parameters": 68298,
+      "convolution_macs": 19200,
+      "bilstm_macs": 3276800,
+      "classifier_macs": 1280,
+      "total_macs": 3297280,
+      "arithmetic_flops": 6594560
+    }
+  ]
+}

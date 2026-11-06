@@ -1,0 +1,36 @@
+{
+  "experiment": "phase4b_sdn_systems_benchmark",
+  "network_trials_per_mode": 5,
+  "ping_packets_per_trial": 20,
+  "ping_interval_seconds": 0.05,
+  "iperf_duration_seconds": 3,
+  "tcp_microflows_per_mode": 500,
+  "tcp_microflow_payload_bytes": 256,
+  "tcp_microflow_response_bytes": 64,
+  "sequence_packets": 5,
+  "modes": [
+    "forwarding",
+    "features",
+    "inference"
+  ],
+  "primary_network_metrics": [
+    "ping_average_rtt_ms",
+    "packet_loss_percent",
+    "iperf_throughput_mbit_s"
+  ],
+  "primary_pipeline_metrics": [
+    "feature_total_us",
+    "controller_decision_us",
+    "inference_roundtrip_us",
+    "service_us",
+    "model_us"
+  ],
+  "latency_reporting": [
+    "mean",
+    "sample_standard_deviation",
+    "p50",
+    "p95",
+    "p99"
+  ],
+  "accuracy_policy": "Synthetic microflows measure deployment overhead only and do not provide malware labels."
+}

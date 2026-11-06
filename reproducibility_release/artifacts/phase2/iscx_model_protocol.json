@@ -1,0 +1,152 @@
+{
+  "dataset": "ISCXVPN2016",
+  "model_protocol_version": 1,
+  "seed": "20261011",
+  "target": "activity",
+  "activity_labels": {
+    "chat": 0,
+    "file_transfer": 1,
+    "streaming": 2,
+    "voip": 3
+  },
+  "domain_attribute": "vpn_status",
+  "domain_labels": {
+    "nonvpn": 0,
+    "vpn": 1
+  },
+  "capture_count": 133,
+  "activities": [
+    "chat",
+    "file_transfer",
+    "streaming",
+    "voip"
+  ],
+  "input_representation": {
+    "features": [
+      "signed_packet_size",
+      "interarrival_time",
+      "sequence_mask"
+    ],
+    "payload_bytes_used": false,
+    "endpoint_addresses_used": false,
+    "endpoint_ports_used": false,
+    "protocol_identifier_used": false,
+    "maximum_stored_packets": 50,
+    "direction": "positive for first-observed flow direction and negative for reverse direction"
+  },
+  "primary_experiment": {
+    "sequence_length": 5,
+    "eligible_flows": 10963,
+    "design": "four-class activity classification using the first five packets",
+    "evaluation": "five capture-group folds",
+    "reporting": [
+      "overall metrics",
+      "per-class metrics",
+      "nonvpn test-subset metrics",
+      "vpn test-subset metrics"
+    ]
+  },
+  "cross_validation": {
+    "fold_count": 5,
+    "runs": [
+      {
+        "run": 0,
+        "training_folds": [
+          2,
+          3,
+          4
+        ],
+        "validation_fold": 1,
+        "test_fold": 0
+      },
+      {
+        "run": 1,
+        "training_folds": [
+          0,
+          3,
+          4
+        ],
+        "validation_fold": 2,
+        "test_fold": 1
+      },
+      {
+        "run": 2,
+        "training_folds": [
+          0,
+          1,
+          4
+        ],
+        "validation_fold": 3,
+        "test_fold": 2
+      },
+      {
+        "run": 3,
+        "training_folds": [
+          0,
+          1,
+          2
+        ],
+        "validation_fold": 4,
+        "test_fold": 3
+      },
+      {
+        "run": 4,
+        "training_folds": [
+          1,
+          2,
+          3
+        ],
+        "validation_fold": 0,
+        "test_fold": 4
+      }
+    ],
+    "assignment": "run r uses fold r for test, fold (r+1) mod 5 for validation, and the other three folds for training",
+    "grouping_unit": "capture_file",
+    "capture_leakage": 0
+  },
+  "training_capture_cap": {
+    "maximum_flows_per_capture": 500,
+    "applies_to": "training partitions only",
+    "selection": "deterministic SHA-256 rank using seed, archive, capture and flow_id after sequence-length eligibility filtering",
+    "validation_capped": false,
+    "test_capped": false
+  },
+  "early_classification": {
+    "sequence_lengths": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "common_cohort_requirement": "packet_count >= 50",
+    "common_cohort_flows": 1811,
+    "comparison": "the same flows are evaluated using their first 5, 10, 20 and 50 packets",
+    "primary_reporting_scope": "pooled-domain four-class activity classification",
+    "domain_specific_results": "secondary because several fold/domain/activity cells are small at N=50"
+  },
+  "normalization": {
+    "policy": "fit any data-dependent normalization using training data only",
+    "padding": "zero padding with an explicit sequence mask"
+  },
+  "imbalance": {
+    "preprocessing_downsampling": false,
+    "allowed_training_methods": [
+      "class-weighted loss",
+      "balanced training sampler"
+    ],
+    "validation_resampling": false,
+    "test_resampling": false
+  },
+  "eligibility_totals": {
+    "5": 10963,
+    "10": 6583,
+    "20": 4089,
+    "50": 1811
+  },
+  "minimum_primary_fold_domain_activity_count": 8,
+  "minimum_n50_fold_pooled_activity_count": 12,
+  "known_limitations": [
+    "The N=50 common cohort is substantially smaller than the primary N=5 cohort.",
+    "Capture sizes and flow counts are highly imbalanced; the training-only capture cap prevents a few recordings from dominating optimization."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "dataset": "USTC-TFC2016",
+  "protocol_version": 1,
+  "experiment": "ten_family_closed_set_sequence_classification",
+  "families": [
+    "Cridex",
+    "Geodo",
+    "Htbot",
+    "Miuref",
+    "Neris",
+    "Nsis-ay",
+    "Shifu",
+    "Tinba",
+    "Virut",
+    "Zeus"
+  ],
+  "seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "split": {
+    "source": "artifacts/phase2/ustc_malware_protocol_manifest.parquet",
+    "train": 137748,
+    "validation": 45915,
+    "test": 45918,
+    "policy": "frozen representation-group-aware temporal 60/20/20"
+  },
+  "input": {
+    "minimum_sequence_length": 3,
+    "maximum_sequence_length": 50,
+    "channels": [
+      "signed_packet_size",
+      "interarrival_time"
+    ],
+    "padding": "right zero padding",
+    "sequence_mask": "derived from frozen sequence length",
+    "recurrent_length_handling": "packed sequence",
+    "payload_bytes_used": false,
+    "endpoint_addresses_used": false,
+    "endpoint_ports_used": false,
+    "protocol_identifier_used": false
+  },
+  "normalization": {
+    "signed_packet_size": "training-valid-token RMS scaling without centering",
+    "interarrival_time": "log1p followed by training-valid-token z-score"
+  },
+  "model": {
+    "architecture": "cnn_bilstm",
+    "conv_channels": 64,
+    "kernel_size": 3,
+    "bilstm_hidden_size_per_direction": 64,
+    "embedding_size": 128,
+    "dropout": 0.3
+  },
+  "training": {
+    "batch_size": 512,
+    "dataloader_workers": 0,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "loss": "inverse-frequency class-weighted cross entropy",
+    "gradient_clip_norm": 1.0,
+    "max_epochs": 60,
+    "early_stopping_metric": "validation_macro_f1",
+    "early_stopping_patience": 10,
+    "early_stopping_min_delta": 0.0001,
+    "amp": false,
+    "device": "cuda:0"
+  },
+  "evaluation": {
+    "primary_metric": "macro_f1",
+    "secondary_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "weighted_f1",
+      "per_class_precision",
+      "per_class_recall",
+      "per_class_f1",
+      "macro_ovr_roc_auc",
+      "macro_average_precision"
+    ],
+    "test_policy": "evaluate once after restoring the best validation checkpoint",
+    "replication": "five stochastic seeds on the same frozen split"
+  },
+  "known_limitation": "Most malware families originate from a single capture, so this evaluates temporal and representation-group separation rather than independent-capture generalization."
+}

@@ -1,0 +1,333 @@
+{
+  "dataset": "USTC-TFC2016",
+  "protocol_version": 1,
+  "task_scope": "malware-family classification only",
+  "families": [
+    "Cridex",
+    "Geodo",
+    "Htbot",
+    "Miuref",
+    "Neris",
+    "Nsis-ay",
+    "Shifu",
+    "Tinba",
+    "Virut",
+    "Zeus"
+  ],
+  "minimum_packets_per_flow": 3,
+  "maximum_stored_packets": 50,
+  "model_input": [
+    "signed_packet_size",
+    "interarrival_time",
+    "sequence_mask"
+  ],
+  "payload_bytes_used": false,
+  "excluded_from_primary_ustc_task": {
+    "benign_application_classification": "Several benign classes have zero or near-zero flows with at least three packets"
+  },
+  "representation_grouping": {
+    "fingerprint": "SHA-256 over first up-to-50 signed packet sizes and IAT values rounded to microseconds",
+    "cross_family_conflicts": "excluded from all experiments",
+    "within_family_duplicates": "kept in the same split"
+  },
+  "closed_set": {
+    "families": 10,
+    "split_method": "representation-group-aware temporal 60/20/20",
+    "training_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "test_fraction": 0.2,
+    "training_imbalance_policy": "retain all unique samples and use class-weighted loss or balanced sampling inside training only"
+  },
+  "open_set": {
+    "runs": 10,
+    "design": "one target unknown family plus one separate calibration-unknown family per run; remaining eight families are known",
+    "threshold_policy": "unknown rejection threshold may use known validation samples and the calibration-unknown family, never the target unknown family",
+    "runs_detail": [
+      {
+        "run": 0,
+        "target_unknown_family": "Cridex",
+        "calibration_unknown_family": "Geodo",
+        "known_families": [
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 1,
+        "target_unknown_family": "Geodo",
+        "calibration_unknown_family": "Htbot",
+        "known_families": [
+          "Cridex",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 2,
+        "target_unknown_family": "Htbot",
+        "calibration_unknown_family": "Miuref",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 3,
+        "target_unknown_family": "Miuref",
+        "calibration_unknown_family": "Neris",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 4,
+        "target_unknown_family": "Neris",
+        "calibration_unknown_family": "Nsis-ay",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Shifu",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 5,
+        "target_unknown_family": "Nsis-ay",
+        "calibration_unknown_family": "Shifu",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Tinba",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 6,
+        "target_unknown_family": "Shifu",
+        "calibration_unknown_family": "Tinba",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Virut",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 7,
+        "target_unknown_family": "Tinba",
+        "calibration_unknown_family": "Virut",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Zeus"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 8,
+        "target_unknown_family": "Virut",
+        "calibration_unknown_family": "Zeus",
+        "known_families": [
+          "Cridex",
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "run": 9,
+        "target_unknown_family": "Zeus",
+        "calibration_unknown_family": "Cridex",
+        "known_families": [
+          "Geodo",
+          "Htbot",
+          "Miuref",
+          "Neris",
+          "Nsis-ay",
+          "Shifu",
+          "Tinba",
+          "Virut"
+        ],
+        "known_training_partition": "closed_split=train",
+        "known_validation_partition": "closed_split=validation",
+        "known_test_partition": "closed_split=test",
+        "unknown_threshold_calibration": "calibration family adaptation_partition=calibration_pool",
+        "zero_shot_unknown_test": "target family adaptation_partition=query_pool",
+        "few_shot_support": "target family adaptation_partition=support_pool",
+        "few_shot_query": "target family adaptation_partition=query_pool",
+        "few_shot_k": [
+          1,
+          5,
+          10
+        ]
+      }
+    ]
+  },
+  "few_shot": {
+    "k": [
+      1,
+      5,
+      10
+    ],
+    "support_selection": "nested deterministic support sets from temporally early support_pool",
+    "query": "temporally later query_pool"
+  },
+  "early_classification": {
+    "ustc_primary": false,
+    "reason": "Tinba has insufficient flows for uniform N=5/10/20/50 evaluation",
+    "planned_dataset": "ISCXVPN2016"
+  },
+  "known_limitation": "Most USTC classes originate from one capture, so closed-set separation is flow/representation-group temporal separation rather than independent capture separation."
+}

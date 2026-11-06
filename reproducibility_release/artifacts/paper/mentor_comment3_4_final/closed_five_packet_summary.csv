@@ -1,0 +1,16 @@
+method,horizon,cohort,metric,n,mean,sample_sd,variability,verified
+cnn_bilstm,5,matched_ge5_test,accuracy,5,0.19649923896499238,0.1380969058503252,stochastic seed variability on one frozen split,True
+cnn_bilstm,5,matched_ge5_test,macro_f1,5,0.22345435774142694,0.067423411892337,stochastic seed variability on one frozen split,True
+cnn_bilstm,5,matched_ge5_test,weighted_f1,5,0.1633109449042499,0.14064822503227375,stochastic seed variability on one frozen split,True
+cnn_bilstm,5,matched_ge5_test,balanced_accuracy,5,0.39170936579488896,0.05419734216883105,stochastic seed variability on one frozen split,True
+cnn_bilstm,5,matched_ge5_test,roc_auc_ovr_macro,5,0.81963170614611,0.04216050857925674,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,matched_ge5_test,accuracy,5,0.7456012176560122,0.031856492720141405,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,matched_ge5_test,macro_f1,5,0.6488965457031987,0.025215522901725636,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,matched_ge5_test,weighted_f1,5,0.74485732582834,0.03077617816957086,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,matched_ge5_test,balanced_accuracy,5,0.7854163222415116,0.02601543280697232,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,matched_ge5_test,roc_auc_ovr_macro,5,0.9825670979186885,0.006106978337651199,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,original_full_test,accuracy,5,0.6928394093819418,0.018215017084078227,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,original_full_test,macro_f1,5,0.738051272491839,0.012824040257784074,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,original_full_test,weighted_f1,5,0.7171812735822226,0.011755867559704888,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,original_full_test,balanced_accuracy,5,0.8065906690597211,0.012681162985453303,stochastic seed variability on one frozen split,True
+cnn_bilstm,50,original_full_test,roc_auc_ovr_macro,5,0.962741698011227,0.005593379863352773,stochastic seed variability on one frozen split,True
