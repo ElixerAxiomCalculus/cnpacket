@@ -1,0 +1,48 @@
+{
+  "dataset": "ECU-MALNETT V2 APT subset",
+  "experiment": "Capture-disjoint, payload-free classical baselines and split sensitivity",
+  "flow_count": 881,
+  "human_rows_checked_for_alignment": 25,
+  "labels_are_independently_verified": false,
+  "model_selection": "Fixed RF and logistic hyperparameters; held-out validation partition not used for tuning",
+  "results": {
+    "LogisticRegression_train50_test5": {
+      "mean_macro_f1": 0.12661295845312764,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.026108519162337127
+    },
+    "LogisticRegression_train50_test50": {
+      "mean_macro_f1": 0.20804342106008727,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.005253536753930253
+    },
+    "LogisticRegression_train5_test5": {
+      "mean_macro_f1": 0.17135985239420223,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.02933942337252406
+    },
+    "RandomForest_train50_test5": {
+      "mean_macro_f1": 0.14756374652925394,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.03383447226518418
+    },
+    "RandomForest_train50_test50": {
+      "mean_macro_f1": 0.2277420780639884,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.025127046850105632
+    },
+    "RandomForest_train5_test5": {
+      "mean_macro_f1": 0.20072320226876159,
+      "n_splits": 5,
+      "sample_sd_macro_f1": 0.02311949230145584
+    }
+  },
+  "split_seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "statistics_unit": "Capture-split repetition, not independent dataset replication"
+}

@@ -4,7 +4,7 @@ This code-focused package supports journal-submission reproducibility for the ma
 
 The study evaluates how classification changes when capture context, duplicate representations, unseen malware families, and observation length are controlled. Signed packet sizes and inter-arrival times support traffic analysis without inspecting payload bytes. Closed-set classification chooses among families seen in training; open-set evaluation also rejects unseen families. Five-packet evaluation measures the effect of short observation on frozen models, while few-shot adaptation adds a prototype from a small labeled support set. The SDN component measures integration and processing overhead. This is a reproducibility-focused evaluation with substantial generalization limitations.
 
-Packaging date: 6 November 2026 (Asia/Calcutta). No experiment, preprocessing job, inference service, network testbed, or installation was executed during packaging. All copied implementation paths remain relative to this release root.
+Initial packaging date: 6 November 2026; supplementary ECU-MALNETT V2 addition: 7 November 2026 (Asia/Calcutta). No experiment, preprocessing job, inference service, network testbed, or installation was executed during packaging. All copied implementation paths remain relative to this release root.
 
 ## Authors and affiliations
 
@@ -26,8 +26,9 @@ Obtain the original datasets from their providers and follow their access, citat
 | CICIDS2017 | [UNB CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) | Eight MachineLearningCSV files; 78-feature binary Random Forest/XGBoost baselines, stratified split and capture-day holdout. Archive at `data/raw/cicids2017/MachineLearningCSV.zip`; extract below `data/interim/cicids2017/raw_csv/`. |
 | USTC-TFC2016 | [Dataset repository](https://github.com/davidyslu/USTC-TFC2016) | Provider `Benign/` and `Malware/` PCAP/7z files below `data/raw/ustc-tfc2016/`. Ten malware families for closed/open-set and prototype adaptation; benign captures are not used in the primary malware-family task. |
 | ISCXVPN2016 | [UNB VPN-nonVPN dataset](https://www.unb.ca/cic/datasets/vpn.html) | Provider ZIPs `NonVPN-PCAPs-01.zip`, `NonVPN-PCAPs-02.zip`, `NonVPN-PCAPs-03.zip`, `VPN-PCAPS-01.zip`, `VPN-PCAPS-02.zip` below `data/raw/iscxvpn2016/`; four activity classes across VPN/non-VPN capture folds. |
+| ECU-MALNETT V2 APT subset (supplement) | [Edith Cowan University dataset](https://ro.ecu.edu.au/datasets/164/) | 53 source captures and 881 retained flows across APT28, APT29, Lazarus, RustyStealer and Turla; Construct-inferred labels. Obtain provider PCAPs and Construct session tables under `data/raw/APT/`; neither is redistributed. |
 
-A separate APT dataset tree exists in the original workspace, but no frozen APT experiment is represented here. It is excluded and no APT evaluation is claimed. ISCX email/P2P categories are excluded from the primary protocol because independent capture groups are insufficient. USTC provider licensing does not license this project's code; dataset terms remain separate.
+A supplementary ECU-MALNETT V2 APT-subset workflow, existing result summaries, split manifests and the completed 25-record alignment review are now included. See [MODERN_EXPERIMENTS.md](MODERN_EXPERIMENTS.md) for every added file, exact reproduction commands and limitations. These later source-group experiments are distinct from the original three-dataset results and do not independently certify malicious activity. ISCX email/P2P categories are excluded from the primary protocol because independent capture groups are insufficient. Dataset licensing remains separate from project-code licensing.
 
 ## Release directory structure
 
@@ -37,6 +38,7 @@ The tree lists every included directory; individual files are enumerated in the 
 reproducibility_release/
 ├── README.md
 ├── CITATION.cff
+├── MODERN_EXPERIMENTS.md             # supplementary ECU workflow, file list and limitations
 ├── paired_open_set_wilcoxon.py
 ├── paired_open_set_auroc.csv
 ├── config/                          # phase1.json: historical SDN configuration
@@ -47,7 +49,8 @@ reproducibility_release/
 │   ├── phase2/                      # dataset inspection, extraction and frozen partitions
 │   ├── phase3/                      # model training/evaluation and result aggregation
 │   ├── phase4/                      # inference service, synthetic benchmark and helpers
-│   └── paper/                       # frozen audit, statistics inputs and table/figure builders
+│   ├── paper/                       # frozen audit, statistics inputs and table/figure builders
+│   └── modern_validation/           # unchanged ECU neural/follow-up implementation
 ├── artifacts/
 │   ├── phase1/                      # original controller lock and environment metadata
 │   ├── phase2/                      # protocols, mappings, capture/support manifests, summaries
@@ -63,6 +66,12 @@ reproducibility_release/
 │   │       └── open_set/            # twenty method/rotation reports and few-shot summaries
 │   ├── phase4/
 │   │   └── benchmark/              # compact synthetic benchmark and GPU summaries
+│   ├── modern_validation/
+│   │   └── ecu_malnett_v2/
+│   │       ├── apt_v2_full_20261106/             # original neural tables and split manifest
+│   │       ├── apt_v2_followup_20261107/         # original pending review
+│   │       ├── apt_v2_followup_20261107_reviewed/# completed classical baseline evidence
+│   │       └── manual_audit/                    # checked review, directional evidence, report/code
 │   └── paper/
 │       ├── mentor_comment3_4_final/ # matched-horizon, adaptation and compatibility tables
 │       └── experimental_completion/# aggregate confusion matrices and model complexity
@@ -332,7 +341,7 @@ The strong single Cridex AUROC does not represent the ten-family average. Thresh
 | Original relative path / pattern | Purpose | Exclusion and consequence |
 |---|---|---|
 | `data/raw/{cicids2017,ustc-tfc2016,iscxvpn2016}/` | Original provider archives/captures | Dataset redistribution excluded; obtain independently from providers. |
-| `data/raw/APT/` | Separate raw materials | Outside frozen experiments represented here; no claims made. |
+| `data/raw/APT/` | ECU-MALNETT V2 raw captures and Construct sessions | Provider data excluded; supplementary code/results and alignment evidence are documented in MODERN_EXPERIMENTS.md. |
 | `data/interim/`, `data/processed/` | PCAPs, staged flow tables, DuckDB databases, model-ready ISCX/CICIDS data | Binary/large/data artifacts; reconstruct only in the execution workspace. |
 | `artifacts/phase2/ustc_malware_protocol_manifest.parquet` | Per-flow representation-aware split assignments | Binary excluded; regenerate with `freeze_ustc_protocol.py`. |
 | `artifacts/phase2/iscx_model_manifest.parquet`, `cicids_split_assignments.parquet` | Per-flow folds/splits | Binary excluded; regeneration needed. Compact protocols are included. |
@@ -353,9 +362,13 @@ No file over 1 MiB was copied. Excluded formats include `.pt`, `.pth`, `.ckpt`, 
 
 Hardware, CUDA kernels, library versions, capture clocks, OS networking and workload affect runtime and potentially near-tie predictions. Five closed seeds share one split; ten open rotations use one seed each, and limited captures constrain external validity. Original full-horizon performance is not five-packet deployment performance. Exact frozen-checkpoint inference requires the original artifacts and checksums; retraining under documented protocols is a separate reproducibility path. No exact runtime or numerical reproduction is claimed.
 
+## Supplementary modern experiments
+
+The [ECU-MALNETT V2 guide](MODERN_EXPERIMENTS.md) documents all 19 added source/evidence files, the reviewed baseline results, independent alignment findings, dependency chain and fresh-run reproduction procedure. Its original binary sequence caches and per-flow prediction exports remain excluded. The baseline gate reads the selected run's `label_review_samples.csv`; packaged pending and checked review copies are deliberately distinguished. Existing findings are copied without experimental reruns.
+
 ## File-by-file implementation and configuration reference
 
-Every included implementation, protocol, configuration and original evidence file is listed below. Inputs and outputs are relative to the release root unless the table explicitly names the local service or system testbed. Included evidence files do not run by themselves; “none (evidence)” means no output is generated by reading them. Reproduction output paths refer to a future standalone execution copy.
+Original implementation, protocol, configuration and evidence files are listed below; all supplementary ECU files are listed individually in MODERN_EXPERIMENTS.md. Inputs and outputs are relative to the release root unless the table explicitly names the local service or system testbed. Included evidence files do not run by themselves; “none (evidence)” means no output is generated by reading them. Reproduction output paths refer to a future standalone execution copy.
 
 | Relative file path | Purpose | Inputs | Outputs |
 |---|---|---|---|
@@ -534,12 +547,13 @@ Every included implementation, protocol, configuration and original evidence fil
 | Relative file path | Purpose | Inputs | Outputs |
 |---|---|---|---|
 | `README.md` | Workflow, file reference, scientific limitations, access and attribution | Inspected source/protocols and author-supplied metadata | Documentation |
+| `MODERN_EXPERIMENTS.md` | ECU supplementary methods, all added files, verified review scope, existing results and fresh-run commands | Inspected modern sources and original evidence | Documentation |
 | `CITATION.cff` | Citation metadata without an invented DOI, email, release date or license | Author-provided manuscript title/names/affiliations | Citation metadata |
-| `reproducibility/selection_plan.json` | Explicit 164-file copy allowlist and excluded category/extension counts | Inspected original filesystem | Selection provenance |
+| `reproducibility/selection_plan.json` | Historical initial copy allowlist and exclusion counts; current files are in release_file_inventory.csv | Inspected original filesystem | Selection provenance |
 | `reproducibility/original_state_before.json` | Pre-copy Git state, selected SHA-256 and research/Git file metadata | Read-only original research tree; Git with optional locks disabled | Before snapshot |
-| `reproducibility/source_copy_integrity.json` | Original/copy hashes, comment-removal counts, preserved-comment exceptions and authorized title-field changes | Copied source/evidence | Copy provenance |
-| `reproducibility/implementation_inventory.json` | Per-script descriptions, inputs/outputs, AST imports and exact argument declarations | Static source parsing only | Machine-readable interface inventory |
-| `reproducibility/validation_results.json` | Syntax, file, interface, privacy-pattern and documentation checks | Release files; no research script imports/execution | Static validation record |
+| `reproducibility/source_copy_integrity.json` | Historical initial original/copy hashes, comment-removal exceptions and authorized title-field changes | Copied source/evidence | Copy provenance |
+| `reproducibility/implementation_inventory.json` | Historical initial per-script descriptions, inputs/outputs, imports and arguments; modern scripts are documented in MODERN_EXPERIMENTS.md | Static source parsing only | Machine-readable interface inventory |
+| `reproducibility/validation_results.json` | Historical initial syntax, file, interface and documentation checks | Release files; no research script imports/execution | Static validation record |
 | `reproducibility/original_state_after.json` | Final Git/source recheck and research/Git metadata differences | Before snapshot and read-only originals | After comparison; reports actual scope |
 | `reproducibility/release_file_inventory.csv` | Every final file and byte size, including this inventory | Completed release | Inventory; sizes stabilized after generation |
 | `reproducibility/release_sha256.txt` | SHA-256 of every release file except this checksum file itself | Final release bytes | Release integrity manifest; historical manifests remain separate |
